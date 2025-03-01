@@ -12,7 +12,7 @@ const BannerAbove = () => {
                             <Image width={5000} height={5000} src='/images/banner/marketplace1.png' className='w-full duration-500' alt='img' />
                         </div>
                         <div className="banner-content relative">
-                            <div className="heading6 text-white">Surface <br />Save Up To ₹569</div>
+                            <div className="heading6 text-white">Surface <br />Save Up To $569</div>
                             <div
                                 className="text-button text-white relative inline-block pb-1 border-b-2 border-white duration-500 mt-2">
                                 Shop Surface</div>
@@ -24,7 +24,7 @@ const BannerAbove = () => {
                             <Image width={5000} height={5000} src='/images/banner/marketplace2.png' className='w-full duration-500' alt='img' />
                         </div>
                         <div className="banner-content relative">
-                            <div className="heading6 text-white">Gamepad <br />Save Up To ₹69</div>
+                            <div className="heading6 text-white">Gamepad <br />Save Up To $69</div>
                             <div
                                 className="text-button text-white relative inline-block pb-1 border-b-2 border-white duration-500 mt-2">
                                 Shop Deals</div>
@@ -36,7 +36,7 @@ const BannerAbove = () => {
                             <Image width={5000} height={5000} src='/images/banner/marketplace3.png' className='w-full duration-500' alt='img' />
                         </div>
                         <div className="banner-content relative">
-                            <div className="heading6 text-white">Cameras <br />Save Up To ₹169</div>
+                            <div className="heading6 text-white">Cameras <br />Save Up To $169</div>
                             <div
                                 className="text-button text-white relative inline-block pb-1 border-b-2 border-white duration-500 mt-2">
                                 Shop Camera</div>

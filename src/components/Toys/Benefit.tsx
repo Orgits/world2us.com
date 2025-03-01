@@ -8,7 +8,7 @@ const Benefit: React.FC<Props> = ({ props }) => {
     return (
         <>
             <div className="container">
-                <div className={`benefit-block ₹{props}`}>
+                <div className={`benefit-block ${props}`}>
                     <div className="heading text-center">
                         <div className="heading3">What Makes Us Different</div>
                         <div className="hading6 normal-case text-secondary text-center mt-3">Sign up for early sale access, new in, promotions and more</div>

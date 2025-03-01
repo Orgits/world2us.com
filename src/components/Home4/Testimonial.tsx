@@ -43,7 +43,7 @@ const Testimonial: React.FC<Props> = ({ data, limit }) => {
                     <div className="list-avatar lg:w-5/12 md:w-1/2 md:pl-9 text-center overflow-hidden">
                         {data.slice(0, limit).map((prd, index) => (
                             <div
-                                className={`bg-img rounded-[32px] overflow-hidden ₹{index === activeIndex ? 'active' : ''}`}
+                                className={`bg-img rounded-[32px] overflow-hidden ${index === activeIndex ? 'active' : ''}`}
                                 key={index}
                                 data-item={prd.id}
                             >

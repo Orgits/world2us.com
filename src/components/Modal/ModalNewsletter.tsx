@@ -14,7 +14,7 @@ const ModalNewsletter = () => {
 
     const handleDetailProduct = (productId: string) => {
         // redirect to shop with category selected
-        router.push(`/product/default?id=₹{productId}`);
+        router.push(`/product/default?id=${productId}`);
     };
 
     useEffect(() => {
@@ -27,7 +27,7 @@ const ModalNewsletter = () => {
         <div className="modal-newsletter" onClick={() => setOpen(false)}>
             <div className="container h-full flex items-center justify-center w-full">
                 <div
-                    className={`modal-newsletter-main ₹{open ? 'open' : ''}`}
+                    className={`modal-newsletter-main ${open ? 'open' : ''}`}
                     onClick={(e) => { e.stopPropagation() }}
                 >
                     <div className="main-content flex rounded-[20px] overflow-hidden w-full">
@@ -68,9 +68,9 @@ const ModalNewsletter = () => {
                                                 <div className=''>
                                                     <div className="name text-button">{item.name}</div>
                                                     <div className="flex items-center gap-2 mt-2">
-                                                        <div className="product-price text-title">₹{item.price}.00</div>
+                                                        <div className="product-price text-title">${item.price}.00</div>
                                                         <div className="product-origin-price text-title text-secondary2">
-                                                            <del>₹{item.originPrice}.00</del>
+                                                            <del>${item.originPrice}.00</del>
                                                         </div>
                                                     </div>
                                                 </div>

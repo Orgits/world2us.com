@@ -48,7 +48,7 @@ const ModalCart = ({ serverTimeLeft }: { serverTimeLeft: CountdownTimeType }) =>
 
   return (
     <>
-      <div className={`modal-cart-block ₹{isModalOpen ? 'open' : ''}`} onClick={closeModalCart}>
+      <div className={`modal-cart-block ${isModalOpen ? 'open' : ''}`} onClick={closeModalCart}>
         <div
           className="modal-cart-main flex"
           onClick={(e) => {
@@ -77,9 +77,9 @@ const ModalCart = ({ serverTimeLeft }: { serverTimeLeft: CountdownTimeType }) =>
                     <div>
                       <div className="name text-button">{product.name}</div>
                       <div className="flex items-center gap-2 mt-2">
-                        <div className="product-price text-title">₹{product.price}.00</div>
+                        <div className="product-price text-title">${product.price}.00</div>
                         <div className="product-origin-price text-title text-secondary2">
-                          <del>₹{product.originPrice}.00</del>
+                          <del>${product.originPrice}.00</del>
                         </div>
                       </div>
                     </div>
@@ -116,7 +116,7 @@ const ModalCart = ({ serverTimeLeft }: { serverTimeLeft: CountdownTimeType }) =>
                 <div className="caption1">
                   Your cart will expire in{' '}
                   <span className="text-red caption1 font-semibold">
-                    {timeLeft.minutes}:{timeLeft.seconds < 10 ? `0₹{timeLeft.seconds}` : timeLeft.seconds}
+                    {timeLeft.minutes}:{timeLeft.seconds < 10 ? `0${timeLeft.seconds}` : timeLeft.seconds}
                   </span>{' '}
                   minutes!
                   <br />
@@ -129,7 +129,7 @@ const ModalCart = ({ serverTimeLeft }: { serverTimeLeft: CountdownTimeType }) =>
               <div className="text">
                 Buy{' '}
                 <span className="text-button">
-                  ₹<span className="more-price">{Math.max(moneyForFreeship - totalCart, 0)}</span>.00{' '}
+                  $<span className="more-price">{Math.max(moneyForFreeship - totalCart, 0)}</span>.00{' '}
                 </span>
                 <span>more to get </span>
                 <span className="text-button">freeship</span>
@@ -138,7 +138,7 @@ const ModalCart = ({ serverTimeLeft }: { serverTimeLeft: CountdownTimeType }) =>
                 <div
                   className="progress-line"
                   style={{
-                    width: totalCart <= moneyForFreeship ? `₹{(totalCart / moneyForFreeship) * 100}%` : `100%`,
+                    width: totalCart <= moneyForFreeship ? `${(totalCart / moneyForFreeship) * 100}%` : `100%`,
                   }}
                 ></div>
               </div>
@@ -175,7 +175,7 @@ const ModalCart = ({ serverTimeLeft }: { serverTimeLeft: CountdownTimeType }) =>
                         <div className="flex items-center text-secondary2 capitalize">
                           {product.selectedSize || product.sizes?.[0]}/{product.selectedColor || product.variation?.[0]?.color}
                         </div>
-                        <div className="product-price text-title">₹{product.price}.00</div>
+                        <div className="product-price text-title">${product.price}.00</div>
                       </div>
                     </div>
                   </div>
@@ -210,7 +210,7 @@ const ModalCart = ({ serverTimeLeft }: { serverTimeLeft: CountdownTimeType }) =>
               </div>
               <div className="flex items-center justify-between pt-6 px-6">
                 <div className="heading5">Subtotal</div>
-                <div className="heading5">₹{totalCart}.00</div>
+                <div className="heading5">${totalCart}.00</div>
               </div>
               <div className="block-button text-center p-6">
                 <div className="flex items-center gap-4">

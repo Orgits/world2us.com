@@ -11,7 +11,7 @@ const TopProduct = () => {
 
     const handleDetailProduct = (productId: string) => {
         // redirect to shop with category selected
-        router.push(`/product/default?id=₹{productId}`);
+        router.push(`/product/default?id=${productId}`);
     };
 
     return (
@@ -39,8 +39,8 @@ const TopProduct = () => {
                                 <Icon.Star weight='fill' className="text-sm text-yellow" />
                             </div>
                             <div className="flex items-center gap-3 mt-3">
-                                <span className="text-title inline-block">₹300.00</span>
-                                <del className="caption2 text-secondary">₹350.00</del>
+                                <span className="text-title inline-block">$300.00</span>
+                                <del className="caption2 text-secondary">$350.00</del>
                             </div>
                         </div>
                     </div>
@@ -60,8 +60,8 @@ const TopProduct = () => {
                                 <Icon.Star weight='fill' className="text-sm text-yellow" />
                             </div>
                             <div className="flex items-center gap-3 mt-3">
-                                <span className="text-title inline-block">₹300.00</span>
-                                <del className="caption2 text-secondary">₹350.00</del>
+                                <span className="text-title inline-block">$300.00</span>
+                                <del className="caption2 text-secondary">$350.00</del>
                             </div>
                         </div>
                     </div>
@@ -81,8 +81,8 @@ const TopProduct = () => {
                                 <Icon.Star weight='fill' className="text-sm text-yellow" />
                             </div>
                             <div className="flex items-center gap-3 mt-3">
-                                <span className="text-title inline-block">₹300.00</span>
-                                <del className="caption2 text-secondary">₹350.00</del>
+                                <span className="text-title inline-block">$300.00</span>
+                                <del className="caption2 text-secondary">$350.00</del>
                             </div>
                         </div>
                     </div>
@@ -102,8 +102,8 @@ const TopProduct = () => {
                                 <Icon.Star weight='fill' className="text-sm text-yellow" />
                             </div>
                             <div className="flex items-center gap-3 mt-3">
-                                <span className="text-title inline-block">₹300.00</span>
-                                <del className="caption2 text-secondary">₹350.00</del>
+                                <span className="text-title inline-block">$300.00</span>
+                                <del className="caption2 text-secondary">$350.00</del>
                             </div>
                         </div>
                     </div>
@@ -123,8 +123,8 @@ const TopProduct = () => {
                                 <Icon.Star weight='fill' className="text-sm text-yellow" />
                             </div>
                             <div className="flex items-center gap-3 mt-3">
-                                <span className="text-title inline-block">₹300.00</span>
-                                <del className="caption2 text-secondary">₹350.00</del>
+                                <span className="text-title inline-block">$300.00</span>
+                                <del className="caption2 text-secondary">$350.00</del>
                             </div>
                         </div>
                     </div>
@@ -144,8 +144,8 @@ const TopProduct = () => {
                                 <Icon.Star weight='fill' className="text-sm text-yellow" />
                             </div>
                             <div className="flex items-center gap-3 mt-3">
-                                <span className="text-title inline-block">₹300.00</span>
-                                <del className="caption2 text-secondary">₹350.00</del>
+                                <span className="text-title inline-block">$300.00</span>
+                                <del className="caption2 text-secondary">$350.00</del>
                             </div>
                         </div>
                     </div>

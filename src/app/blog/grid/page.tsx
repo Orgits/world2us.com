@@ -18,7 +18,7 @@ const BlogGrid = () => {
 
     const handleBlogClick = (blogId: string) => {
         // Go to blog detail with blogId selected
-        router.push(`/blog/detail1?id=₹{blogId}`);
+        router.push(`/blog/detail1?id=${blogId}`);
     };
 
     let filteredData = blogData.filter(blog => {

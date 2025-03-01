@@ -188,7 +188,7 @@ const FixedPrice: React.FC<Props> = ({ data, productId }) => {
                                     </div>
                                 </>
                             )}
-                            <div className={`popup-img ₹{openPopupImg ? 'open' : ''}`}>
+                            <div className={`popup-img ${openPopupImg ? 'open' : ''}`}>
                                 <span
                                     className="close-popup-btn absolute top-4 right-4 z-[2] cursor-pointer"
                                     onClick={() => {
@@ -239,7 +239,7 @@ const FixedPrice: React.FC<Props> = ({ data, productId }) => {
                                     <div className="icon-delivery-truck text-4xl"></div>
                                     <div>
                                         <div className="text-title">Free shipping</div>
-                                        <div className="caption1 text-secondary mt-1">Free shipping on orders over ₹75.</div>
+                                        <div className="caption1 text-secondary mt-1">Free shipping on orders over $75.</div>
                                     </div>
                                 </div>
                                 <div className="item flex items-center gap-3 mt-4">
@@ -259,13 +259,13 @@ const FixedPrice: React.FC<Props> = ({ data, productId }) => {
                             </div>
                             <div className="desc-block pb-6 border-b border-line mt-6">
                                 <div
-                                    className={`tab-item heading5 flex items-center justify-between cursor-pointer ₹{activeTab === 'description' ? 'active' : ''}`}
+                                    className={`tab-item heading5 flex items-center justify-between cursor-pointer ${activeTab === 'description' ? 'active' : ''}`}
                                     onClick={() => handleActiveTab('description')}
                                 >
                                     <span className='heading5'>Description</span>
                                     <Icon.CaretDown />
                                 </div>
-                                <div className={`desc-item md:pt-8 pt-5 description ₹{activeTab === 'description' ? 'open' : ''}`}>
+                                <div className={`desc-item md:pt-8 pt-5 description ${activeTab === 'description' ? 'open' : ''}`}>
                                     <div className="right">
                                         <div className="heading6">About This Products</div>
                                         <div className="list-feature">
@@ -321,13 +321,13 @@ const FixedPrice: React.FC<Props> = ({ data, productId }) => {
                             </div>
                             <div className="desc-block pb-6 border-b border-line mt-6">
                                 <div
-                                    className={`tab-item heading5 flex items-center justify-between cursor-pointer ₹{activeTab === 'specifications' ? 'active' : ''}`}
+                                    className={`tab-item heading5 flex items-center justify-between cursor-pointer ${activeTab === 'specifications' ? 'active' : ''}`}
                                     onClick={() => handleActiveTab('specifications')}
                                 >
                                     <span className='heading5'>Specifications</span>
                                     <Icon.CaretDown />
                                 </div>
-                                <div className={`desc-item md:pt-8 pt-5 specifications flex items-center justify-center ₹{activeTab === 'specifications' ? 'open' : ''}`}>
+                                <div className={`desc-item md:pt-8 pt-5 specifications flex items-center justify-center ${activeTab === 'specifications' ? 'open' : ''}`}>
                                     <div className='w-full'>
                                         <div className="item bg-surface flex items-center gap-8 py-3 px-10">
                                             <div className="text-title sm:w-1/4 w-1/3">Rating</div>
@@ -400,13 +400,13 @@ const FixedPrice: React.FC<Props> = ({ data, productId }) => {
                             </div>
                             <div className="desc-block mt-6">
                                 <div
-                                    className={`tab-item heading5 flex items-center justify-between cursor-pointer ₹{activeTab === 'review' ? 'active' : ''}`}
+                                    className={`tab-item heading5 flex items-center justify-between cursor-pointer ${activeTab === 'review' ? 'active' : ''}`}
                                     onClick={() => handleActiveTab('review')}
                                 >
                                     <span className='heading5'>Review</span>
                                     <Icon.CaretDown />
                                 </div>
-                                <div className={`desc-item md:pt-8 pt-5 review-block ₹{activeTab === 'review' ? 'open' : ''}`}>
+                                <div className={`desc-item md:pt-8 pt-5 review-block ${activeTab === 'review' ? 'open' : ''}`}>
                                     <div className="top-overview">
                                         <div className="left flex items-center justify-between w-full">
                                             <div className='rating black-start flex flex-col items-center'>
@@ -650,7 +650,7 @@ const FixedPrice: React.FC<Props> = ({ data, productId }) => {
                                         <div className="heading4 mt-1">{productMain.name}</div>
                                     </div>
                                     <div
-                                        className={`add-wishlist-btn w-12 h-12 flex items-center justify-center border border-line cursor-pointer rounded-xl duration-300 hover:bg-black hover:text-white ₹{wishlistState.wishlistArray.some(item => item.id === productMain.id) ? 'active' : ''}`}
+                                        className={`add-wishlist-btn w-12 h-12 flex items-center justify-center border border-line cursor-pointer rounded-xl duration-300 hover:bg-black hover:text-white ${wishlistState.wishlistArray.some(item => item.id === productMain.id) ? 'active' : ''}`}
                                         onClick={handleAddToWishlist}
                                     >
                                         {wishlistState.wishlistArray.some(item => item.id === productMain.id) ? (
@@ -669,9 +669,9 @@ const FixedPrice: React.FC<Props> = ({ data, productId }) => {
                                     <span className='caption1 text-secondary'>(1.234 reviews)</span>
                                 </div>
                                 <div className="flex items-center gap-3 flex-wrap mt-5 pb-6 border-b border-line">
-                                    <div className="product-price heading5">₹{productMain.price}.00</div>
+                                    <div className="product-price heading5">${productMain.price}.00</div>
                                     <div className='w-px h-4 bg-line'></div>
-                                    <div className="product-origin-price font-normal text-secondary2"><del>₹{productMain.originPrice}.00</del></div>
+                                    <div className="product-origin-price font-normal text-secondary2"><del>${productMain.originPrice}.00</del></div>
                                     {productMain.originPrice && (
                                         <div className="product-sale caption2 font-semibold bg-green px-3 py-0.5 inline-block rounded-full">
                                             -{percentSale}%
@@ -685,7 +685,7 @@ const FixedPrice: React.FC<Props> = ({ data, productId }) => {
                                         <div className="list-color flex items-center gap-2 flex-wrap mt-3">
                                             {productMain.variation.map((item, index) => (
                                                 <div
-                                                    className={`color-item w-12 h-12 rounded-xl duration-300 relative ₹{activeColor === item.color ? 'active' : ''}`}
+                                                    className={`color-item w-12 h-12 rounded-xl duration-300 relative ${activeColor === item.color ? 'active' : ''}`}
                                                     key={index}
                                                     onClick={() => handleActiveColor(item.color)}
                                                 >
@@ -717,7 +717,7 @@ const FixedPrice: React.FC<Props> = ({ data, productId }) => {
                                         <div className="list-size flex items-center gap-2 flex-wrap mt-3">
                                             {productMain.sizes.map((item, index) => (
                                                 <div
-                                                    className={`size-item ₹{item === 'freesize' ? 'px-3 py-2' : 'w-12 h-12'} flex items-center justify-center text-button rounded-full bg-white border border-line ₹{activeSize === item ? 'active' : ''}`}
+                                                    className={`size-item ${item === 'freesize' ? 'px-3 py-2' : 'w-12 h-12'} flex items-center justify-center text-button rounded-full bg-white border border-line ${activeSize === item ? 'active' : ''}`}
                                                     key={index}
                                                     onClick={() => handleActiveSize(item)}
                                                 >
@@ -732,7 +732,7 @@ const FixedPrice: React.FC<Props> = ({ data, productId }) => {
                                             <Icon.Minus
                                                 size={20}
                                                 onClick={handleDecreaseQuantity}
-                                                className={`₹{productMain.quantityPurchase === 1 ? 'disabled' : ''} cursor-pointer`}
+                                                className={`${productMain.quantityPurchase === 1 ? 'disabled' : ''} cursor-pointer`}
                                             />
                                             <div className="body1 font-semibold">{productMain.quantityPurchase}</div>
                                             <Icon.Plus

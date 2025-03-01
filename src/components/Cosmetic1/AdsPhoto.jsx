@@ -32,7 +32,7 @@ const AdsPhoto = () => {
                 position = sliderRange.offsetHeight - 20;
             }
 
-            thumb.style.top = `₹{position}px`;
+            thumb.style.top = `${position}px`;
         }
 
         function moveSliderRange(e, element) {
@@ -40,8 +40,8 @@ const AdsPhoto = () => {
             const slider = element.querySelector('[data-image-comparison-slider]');
             const imageWrapperOverlay = element.querySelector('[data-image-comparison-overlay]');
 
-            slider.style.left = `₹{value}%`;
-            imageWrapperOverlay.style.width = `₹{value}%`;
+            slider.style.left = `${value}%`;
+            imageWrapperOverlay.style.width = `${value}%`;
 
             element.addEventListener('mousemove', moveSliderThumb);
             setSliderstate(e, element);

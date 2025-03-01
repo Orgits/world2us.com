@@ -109,7 +109,7 @@ const Checkout = () => {
                                         <div className="payment-block md:mt-10 mt-6">
                                             <div className="heading5">Choose payment Option:</div>
                                             <div className="list-payment mt-5">
-                                                <div className={`type bg-surface p-5 border border-line rounded-lg ₹{activePayment === 'credit-card' ? 'open' : ''}`}>
+                                                <div className={`type bg-surface p-5 border border-line rounded-lg ${activePayment === 'credit-card' ? 'open' : ''}`}>
                                                     <input className="cursor-pointer" type="radio" id="credit" name="payment" checked={activePayment === 'credit-card'} onChange={() => handlePayment('credit-card')} />
                                                     <label className="text-button pl-2 cursor-pointer" htmlFor="credit">Credit Card</label>
                                                     <div className="infor">
@@ -134,7 +134,7 @@ const Checkout = () => {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className={`type bg-surface p-5 border border-line rounded-lg mt-5 ₹{activePayment === 'cash-delivery' ? 'open' : ''}`}>
+                                                <div className={`type bg-surface p-5 border border-line rounded-lg mt-5 ${activePayment === 'cash-delivery' ? 'open' : ''}`}>
                                                     <input className="cursor-pointer" type="radio" id="delivery" name="payment" checked={activePayment === 'cash-delivery'} onChange={() => handlePayment('cash-delivery')} />
                                                     <label className="text-button pl-2 cursor-pointer" htmlFor="delivery">Cash on delivery</label>
                                                     <div className="infor">
@@ -160,7 +160,7 @@ const Checkout = () => {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className={`type bg-surface p-5 border border-line rounded-lg mt-5 ₹{activePayment === 'apple-pay' ? 'open' : ''}`}>
+                                                <div className={`type bg-surface p-5 border border-line rounded-lg mt-5 ${activePayment === 'apple-pay' ? 'open' : ''}`}>
                                                     <input className="cursor-pointer" type="radio" id="apple" name="payment" checked={activePayment === 'apple-pay'} onChange={() => handlePayment('apple-pay')} />
                                                     <label className="text-button pl-2 cursor-pointer" htmlFor="apple">Apple Pay</label>
                                                     <div className="infor">
@@ -186,7 +186,7 @@ const Checkout = () => {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className={`type bg-surface p-5 border border-line rounded-lg mt-5 ₹{activePayment === 'paypal' ? 'open' : ''}`}>
+                                                <div className={`type bg-surface p-5 border border-line rounded-lg mt-5 ${activePayment === 'paypal' ? 'open' : ''}`}>
                                                     <input className="cursor-pointer" type="radio" id="paypal" name="payment" checked={activePayment === 'paypal'} onChange={() => handlePayment('paypal')} />
                                                     <label className="text-button pl-2 cursor-pointer" htmlFor="paypal">PayPal</label>
                                                     <div className="infor">
@@ -253,7 +253,7 @@ const Checkout = () => {
                                                             <span className='quantity'>{product.quantity}</span>
                                                             <span className='px-1'>x</span>
                                                             <span>
-                                                                ₹{product.price}.00
+                                                                ${product.price}.00
                                                             </span>
                                                         </div>
                                                     </div>
@@ -264,15 +264,15 @@ const Checkout = () => {
                                 </div>
                                 <div className="discount-block py-5 flex justify-between border-b border-line">
                                     <div className="text-title">Discounts</div>
-                                    <div className="text-title">-₹<span className="discount">{discount}</span><span>.00</span></div>
+                                    <div className="text-title">-$<span className="discount">{discount}</span><span>.00</span></div>
                                 </div>
                                 <div className="ship-block py-5 flex justify-between border-b border-line">
                                     <div className="text-title">Shipping</div>
-                                    <div className="text-title">{Number(ship) === 0 ? 'Free' : `₹₹{ship}.00`}</div>
+                                    <div className="text-title">{Number(ship) === 0 ? 'Free' : `$${ship}.00`}</div>
                                 </div>
                                 <div className="total-cart-block pt-5 flex justify-between">
                                     <div className="heading5">Total</div>
-                                    <div className="heading5 total-cart">₹{totalCart - Number(discount) + Number(ship)}.00</div>
+                                    <div className="heading5 total-cart">${totalCart - Number(discount) + Number(ship)}.00</div>
                                 </div>
                             </div>
                         </div>

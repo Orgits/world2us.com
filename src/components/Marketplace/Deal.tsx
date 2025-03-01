@@ -23,7 +23,7 @@ const Deal = () => {
 
     const handleDetailProduct = (productId: string) => {
         // redirect to shop with category selected
-        router.push(`/product/default?id=₹{productId}`);
+        router.push(`/product/default?id=${productId}`);
     };
 
     return (
@@ -34,13 +34,13 @@ const Deal = () => {
                         <div className="heading3">Deals of the week</div>
                         <div className="deal-time bg-red py-1 px-5 rounded-lg">
                             <div className="heading6 text-white">
-                                <span className='countdown-day'>{timeLeft.days < 10 ? `0₹{timeLeft.days}` : timeLeft.days}</span>
+                                <span className='countdown-day'>{timeLeft.days < 10 ? `0${timeLeft.days}` : timeLeft.days}</span>
                                 <span>D : </span>
-                                <span className='countdown-hour'>{timeLeft.hours < 10 ? `0₹{timeLeft.hours}` : timeLeft.hours}</span>
+                                <span className='countdown-hour'>{timeLeft.hours < 10 ? `0${timeLeft.hours}` : timeLeft.hours}</span>
                                 <span>H : </span>
-                                <span className='countdown-minute'>{timeLeft.minutes < 10 ? `0₹{timeLeft.minutes}` : timeLeft.minutes}</span>
+                                <span className='countdown-minute'>{timeLeft.minutes < 10 ? `0${timeLeft.minutes}` : timeLeft.minutes}</span>
                                 <span>M : </span>
-                                <span className='countdown-second'>{timeLeft.seconds < 10 ? `0₹{timeLeft.seconds}` : timeLeft.seconds}</span>
+                                <span className='countdown-second'>{timeLeft.seconds < 10 ? `0${timeLeft.seconds}` : timeLeft.seconds}</span>
                                 <span>S</span>
                             </div>
                         </div>

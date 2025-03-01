@@ -167,7 +167,7 @@ const VideoTutorial = () => {
                 </div>
                 <div className={`modal-video-block`} onClick={() => setOpenVideo(false)}>
                     <div
-                        className={`modal-video-main ₹{openVideo ? 'open' : ''}`}
+                        className={`modal-video-main ${openVideo ? 'open' : ''}`}
                         onClick={(e) => { e.stopPropagation() }}
                     >
                         <iframe src="https://www.youtube.com/embed/CxZI6R1VKJY?si=VB9g1QxpuTyoYFls" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>

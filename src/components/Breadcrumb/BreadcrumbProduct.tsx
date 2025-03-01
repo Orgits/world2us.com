@@ -18,7 +18,7 @@ const BreadcrumbProduct: React.FC<Props> = ({ data, productPage, productId }) =>
 
     const handleDetailProduct = (productId: string | number | null) => {
         // Chuyển hướng đến trang shop với category được chọn
-        router.push(`/product/₹{productPage}?id=₹{productId}`);
+        router.push(`/product/${productPage}?id=${productId}`);
     };
 
     return (
@@ -31,7 +31,7 @@ const BreadcrumbProduct: React.FC<Props> = ({ data, productPage, productId }) =>
                             <Icon.CaretRight size={12} className='text-secondary2' />
                             <div className='caption1 text-secondary2'>Product</div>
                             <Icon.CaretRight size={12} className='text-secondary2' />
-                            <div className='caption1 capitalize'>{`Product ₹{productPage}`}</div>
+                            <div className='caption1 capitalize'>{`Product ${productPage}`}</div>
                         </div>
                         <div className="right flex items-center gap-3">
                             {productId !== null && Number(productId) >= 2 ? (

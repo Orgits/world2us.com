@@ -142,7 +142,7 @@ const CountdownTimer: React.FC<Props> = ({ data, productId }) => {
                                     }}
                                 />
                             ))}
-                            <div className={`popup-img ₹{openPopupImg ? 'open' : ''}`}>
+                            <div className={`popup-img ${openPopupImg ? 'open' : ''}`}>
                                 <span
                                     className="close-popup-btn absolute top-4 right-4 z-[2] cursor-pointer"
                                     onClick={() => {
@@ -191,7 +191,7 @@ const CountdownTimer: React.FC<Props> = ({ data, productId }) => {
                                     <div className="heading4 mt-1">{productMain.name}</div>
                                 </div>
                                 <div
-                                    className={`add-wishlist-btn w-12 h-12 flex items-center justify-center border border-line cursor-pointer rounded-xl duration-300 hover:bg-black hover:text-white ₹{wishlistState.wishlistArray.some(item => item.id === productMain.id) ? 'active' : ''}`}
+                                    className={`add-wishlist-btn w-12 h-12 flex items-center justify-center border border-line cursor-pointer rounded-xl duration-300 hover:bg-black hover:text-white ${wishlistState.wishlistArray.some(item => item.id === productMain.id) ? 'active' : ''}`}
                                     onClick={handleAddToWishlist}
                                 >
                                     {wishlistState.wishlistArray.some(item => item.id === productMain.id) ? (
@@ -210,9 +210,9 @@ const CountdownTimer: React.FC<Props> = ({ data, productId }) => {
                                 <span className='caption1 text-secondary'>(1.234 reviews)</span>
                             </div>
                             <div className="flex items-center gap-3 flex-wrap mt-5 pb-6 border-b border-line">
-                                <div className="product-price heading5">₹{productMain.price}.00</div>
+                                <div className="product-price heading5">${productMain.price}.00</div>
                                 <div className='w-px h-4 bg-line'></div>
-                                <div className="product-origin-price font-normal text-secondary2"><del>₹{productMain.originPrice}.00</del></div>
+                                <div className="product-origin-price font-normal text-secondary2"><del>${productMain.originPrice}.00</del></div>
                                 {productMain.originPrice && (
                                     <div className="product-sale caption2 font-semibold bg-green px-3 py-0.5 inline-block rounded-full">
                                         -{percentSale}%
@@ -226,22 +226,22 @@ const CountdownTimer: React.FC<Props> = ({ data, productId }) => {
                                         Offer ends in:</div>
                                     <div className="countdown-time flex items-center lg:gap-5 gap-3 max-[400px]:justify-between max-[400px]:w-full">
                                         <div className="item w-[60px] h-[60px] flex flex-col items-center justify-center border border-red rounded-lg">
-                                            <div className="days heading6 text-center">{timeLeft.days < 10 ? `0₹{timeLeft.days}` : timeLeft.days}</div>
+                                            <div className="days heading6 text-center">{timeLeft.days < 10 ? `0${timeLeft.days}` : timeLeft.days}</div>
                                             <div className="caption1 text-center">Days</div>
                                         </div>
                                         <div className="heading5">:</div>
                                         <div className="item w-[60px] h-[60px] flex flex-col items-center justify-center border border-red rounded-lg">
-                                            <div className="hours heading6 text-center">{timeLeft.hours < 10 ? `0₹{timeLeft.hours}` : timeLeft.hours}</div>
+                                            <div className="hours heading6 text-center">{timeLeft.hours < 10 ? `0${timeLeft.hours}` : timeLeft.hours}</div>
                                             <div className="caption1 text-center">Hours</div>
                                         </div>
                                         <div className="heading5">:</div>
                                         <div className="item w-[60px] h-[60px] flex flex-col items-center justify-center border border-red rounded-lg">
-                                            <div className="mins heading6 text-center">{timeLeft.minutes < 10 ? `0₹{timeLeft.minutes}` : timeLeft.minutes}</div>
+                                            <div className="mins heading6 text-center">{timeLeft.minutes < 10 ? `0${timeLeft.minutes}` : timeLeft.minutes}</div>
                                             <div className="caption1 text-center">Mins</div>
                                         </div>
                                         <div className="heading5">:</div>
                                         <div className="item w-[60px] h-[60px] flex flex-col items-center justify-center border border-red rounded-lg">
-                                            <div className="secs heading6 text-center">{timeLeft.seconds < 10 ? `0₹{timeLeft.seconds}` : timeLeft.seconds}</div>
+                                            <div className="secs heading6 text-center">{timeLeft.seconds < 10 ? `0${timeLeft.seconds}` : timeLeft.seconds}</div>
                                             <div className="caption1 text-center">Secs</div>
                                         </div>
                                     </div>
@@ -252,7 +252,7 @@ const CountdownTimer: React.FC<Props> = ({ data, productId }) => {
                                         <div className="progress h-2 rounded-full overflow-hidden bg-line relative">
                                             <div
                                                 className={`percent-sold absolute top-0 left-0 h-full bg-red`}
-                                                style={{ width: `₹{Math.floor((productMain.sold / productMain.quantity) * 100)}%` }}
+                                                style={{ width: `${Math.floor((productMain.sold / productMain.quantity) * 100)}%` }}
                                             ></div>
                                         </div>
                                         <div className="flex items-center gap-1 mt-2">
@@ -266,7 +266,7 @@ const CountdownTimer: React.FC<Props> = ({ data, productId }) => {
                                     <div className="list-color flex items-center gap-2 flex-wrap mt-3">
                                         {productMain.variation.map((item, index) => (
                                             <div
-                                                className={`color-item w-12 h-12 rounded-xl duration-300 relative ₹{activeColor === item.color ? 'active' : ''}`}
+                                                className={`color-item w-12 h-12 rounded-xl duration-300 relative ${activeColor === item.color ? 'active' : ''}`}
                                                 key={index}
                                                 onClick={() => handleActiveColor(item.color)}
                                             >
@@ -298,7 +298,7 @@ const CountdownTimer: React.FC<Props> = ({ data, productId }) => {
                                     <div className="list-size flex items-center gap-2 flex-wrap mt-3">
                                         {productMain.sizes.map((item, index) => (
                                             <div
-                                                className={`size-item ₹{item === 'freesize' ? 'px-3 py-2' : 'w-12 h-12'} flex items-center justify-center text-button rounded-full bg-white border border-line ₹{activeSize === item ? 'active' : ''}`}
+                                                className={`size-item ${item === 'freesize' ? 'px-3 py-2' : 'w-12 h-12'} flex items-center justify-center text-button rounded-full bg-white border border-line ${activeSize === item ? 'active' : ''}`}
                                                 key={index}
                                                 onClick={() => handleActiveSize(item)}
                                             >
@@ -313,7 +313,7 @@ const CountdownTimer: React.FC<Props> = ({ data, productId }) => {
                                         <Icon.Minus
                                             size={20}
                                             onClick={handleDecreaseQuantity}
-                                            className={`₹{productMain.quantityPurchase === 1 ? 'disabled' : ''} cursor-pointer`}
+                                            className={`${productMain.quantityPurchase === 1 ? 'disabled' : ''} cursor-pointer`}
                                         />
                                         <div className="body1 font-semibold">{productMain.quantityPurchase}</div>
                                         <Icon.Plus
@@ -443,7 +443,7 @@ const CountdownTimer: React.FC<Props> = ({ data, productId }) => {
                                     <div className="icon-delivery-truck text-4xl"></div>
                                     <div>
                                         <div className="text-title">Free shipping</div>
-                                        <div className="caption1 text-secondary mt-1">Free shipping on orders over ₹75.</div>
+                                        <div className="caption1 text-secondary mt-1">Free shipping on orders over $75.</div>
                                     </div>
                                 </div>
                                 <div className="item flex items-center gap-3 mt-4">
@@ -469,19 +469,19 @@ const CountdownTimer: React.FC<Props> = ({ data, productId }) => {
                         <div className="flex items-center justify-center w-full">
                             <div className="menu-tab flex items-center md:gap-[60px] gap-8">
                                 <div
-                                    className={`tab-item heading5 has-line-before text-secondary2 hover:text-black duration-300 ₹{activeTab === 'description' ? 'active' : ''}`}
+                                    className={`tab-item heading5 has-line-before text-secondary2 hover:text-black duration-300 ${activeTab === 'description' ? 'active' : ''}`}
                                     onClick={() => handleActiveTab('description')}
                                 >
                                     Description
                                 </div>
                                 <div
-                                    className={`tab-item heading5 has-line-before text-secondary2 hover:text-black duration-300 ₹{activeTab === 'specifications' ? 'active' : ''}`}
+                                    className={`tab-item heading5 has-line-before text-secondary2 hover:text-black duration-300 ${activeTab === 'specifications' ? 'active' : ''}`}
                                     onClick={() => handleActiveTab('specifications')}
                                 >
                                     Specifications
                                 </div>
                                 <div
-                                    className={`tab-item heading5 has-line-before text-secondary2 hover:text-black duration-300 ₹{activeTab === 'review' ? 'active' : ''}`}
+                                    className={`tab-item heading5 has-line-before text-secondary2 hover:text-black duration-300 ${activeTab === 'review' ? 'active' : ''}`}
                                     onClick={() => handleActiveTab('review')}
                                 >
                                     Review
@@ -489,7 +489,7 @@ const CountdownTimer: React.FC<Props> = ({ data, productId }) => {
                             </div>
                         </div>
                         <div className="desc-block mt-8">
-                            <div className={`desc-item description ₹{activeTab === 'description' ? 'open' : ''}`}>
+                            <div className={`desc-item description ${activeTab === 'description' ? 'open' : ''}`}>
                                 <div className='grid md:grid-cols-2 gap-8 gap-y-5'>
                                     <div className="left">
                                         <div className="heading6">Description</div>
@@ -544,7 +544,7 @@ const CountdownTimer: React.FC<Props> = ({ data, productId }) => {
                                     </div>
                                 </div>
                             </div>
-                            <div className={`desc-item specifications flex items-center justify-center ₹{activeTab === 'specifications' ? 'open' : ''}`}>
+                            <div className={`desc-item specifications flex items-center justify-center ${activeTab === 'specifications' ? 'open' : ''}`}>
                                 <div className='lg:w-1/2 sm:w-3/4 w-full'>
                                     <div className="item bg-surface flex items-center gap-8 py-3 px-10">
                                         <div className="text-title sm:w-1/4 w-1/3">Rating</div>
@@ -614,7 +614,7 @@ const CountdownTimer: React.FC<Props> = ({ data, productId }) => {
                                     </div>
                                 </div>
                             </div>
-                            <div className={`desc-item review-block ₹{activeTab === 'review' ? 'open' : ''}`}>
+                            <div className={`desc-item review-block ${activeTab === 'review' ? 'open' : ''}`}>
                                 <div className="top-overview flex max-sm:flex-col items-center justify-between gap-12 gap-y-4">
                                     <div className="left flex max-sm:flex-col gap-y-4 items-center justify-between lg:w-1/2 sm:w-2/3 w-full sm:pr-5">
                                         <div className='rating black-start flex flex-col items-center'>

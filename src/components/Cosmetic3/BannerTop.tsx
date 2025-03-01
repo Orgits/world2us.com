@@ -10,19 +10,19 @@ interface Props {
 const BannerTop: React.FC<Props> = ({ props, textColor, bgLine }) => {
     return (
         <>
-            <div className={`banner-top ₹{props}`}>
+            <div className={`banner-top ${props}`}>
                 <Marquee>
-                    <div className={`heading5 md:px-[110px] px-12 ₹{textColor}`}>Get Glowing Skin</div>
+                    <div className={`heading5 md:px-[110px] px-12 ${textColor}`}>Get Glowing Skin</div>
                     <div className={`icon-leaves md:text-[32px] text-[24px]`}></div>
-                    <div className={`heading5 md:px-[110px] px-12 ₹{textColor}`}>Learn Skincare Tips</div>
+                    <div className={`heading5 md:px-[110px] px-12 ${textColor}`}>Learn Skincare Tips</div>
                     <div className={`icon-double-leaves md:text-[32px] text-[24px]`}></div>
-                    <div className={`heading5 md:px-[110px] px-12 ₹{textColor}`}>Subscribe for Exclusive Offers</div>
+                    <div className={`heading5 md:px-[110px] px-12 ${textColor}`}>Subscribe for Exclusive Offers</div>
                     <div className={`icon-leaves md:text-[32px] text-[24px]`}></div>
-                    <div className={`heading5 md:px-[110px] px-12 ₹{textColor}`}>Get Glowing Skin</div>
+                    <div className={`heading5 md:px-[110px] px-12 ${textColor}`}>Get Glowing Skin</div>
                     <div className={`icon-double-leaves md:text-[32px] text-[24px]`}></div>
-                    <div className={`heading5 md:px-[110px] px-12 ₹{textColor}`}>Learn Skincare Tips</div>
+                    <div className={`heading5 md:px-[110px] px-12 ${textColor}`}>Learn Skincare Tips</div>
                     <div className={`icon-leaves md:text-[32px] text-[24px]`}></div>
-                    <div className={`heading5 md:px-[110px] px-12 ₹{textColor}`}>Subscribe for Exclusive Offers</div>
+                    <div className={`heading5 md:px-[110px] px-12 ${textColor}`}>Subscribe for Exclusive Offers</div>
                     <div className={`icon-double-leaves md:text-[32px] text-[24px]`}></div>
                 </Marquee>
             </div>

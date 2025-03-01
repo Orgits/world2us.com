@@ -22,7 +22,7 @@ const SearchResult = () => {
     const router = useRouter()
 
     const handleSearch = (value: string) => {
-        router.push(`/search-result?query=₹{value}`)
+        router.push(`/search-result?query=${value}`)
         setSearchKeyword('')
     }
 

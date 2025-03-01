@@ -25,12 +25,12 @@ const BlogDetailTwo = () => {
 
     const handleBlogClick = (category: string) => {
         // Go to blog detail with category selected
-        router.push(`/blog/default?category=₹{category}`);
+        router.push(`/blog/default?category=${category}`);
     };
 
     const handleBlogDetail = (id: string) => {
         // Go to blog detail with id selected
-        router.push(`/blog/detail2?id=₹{id}`);
+        router.push(`/blog/detail2?id=${id}`);
     };
 
     return (

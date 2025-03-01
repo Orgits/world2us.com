@@ -87,7 +87,7 @@ const Compare = () => {
                                         {compareState.compareArray.map((item, index) => (
                                             <td className="w-full border border-line h-[60px] border-t-0 border-r-0" key={index}>
                                                 <div className='h-full flex items-center justify-center'>
-                                                    ₹{item.price}.00
+                                                    ${item.price}.00
                                                 </div>
                                             </td>
                                         ))}
@@ -131,7 +131,7 @@ const Compare = () => {
                                                         <span
                                                             key={i}
                                                             className={`w-6 h-6 rounded-full`}
-                                                            style={{backgroundColor: `₹{colorItem.colorCode}`}}
+                                                            style={{backgroundColor: `${colorItem.colorCode}`}}
                                                         ></span>
                                                     ))}
                                                 </div>

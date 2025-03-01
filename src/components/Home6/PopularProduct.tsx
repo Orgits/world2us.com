@@ -10,7 +10,7 @@ const PopularProduct = () => {
 
     const handleDetailProduct = (productId: string) => {
         // redirect to shop with category selected
-        router.push(`/product/default?id=₹{productId}`);
+        router.push(`/product/default?id=${productId}`);
     };
 
     return (
@@ -32,7 +32,7 @@ const PopularProduct = () => {
                             </div>
                             <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct('3')}>
                                 <div className="text-title name">Off-The-Shoulder</div>
-                                <div className="price text-center">₹32.00</div>
+                                <div className="price text-center">$32.00</div>
                                 <div
                                     className="text-center underline mt-1 text-button-uppercase duration-300 text-secondary2 hover:text-black">
                                     View
@@ -45,7 +45,7 @@ const PopularProduct = () => {
                             </div>
                             <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct('3')}>
                                 <div className="text-title name">Off-The-Shoulder</div>
-                                <div className="price text-center">₹32.00</div>
+                                <div className="price text-center">$32.00</div>
                                 <div
                                     className="text-center underline mt-1 text-button-uppercase duration-300 text-secondary2 hover:text-black">
                                     View
@@ -68,7 +68,7 @@ const PopularProduct = () => {
                             </div>
                             <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct('13')}>
                                 <div className="text-title name">Mesh Shirt</div>
-                                <div className="price text-center">₹35.00</div>
+                                <div className="price text-center">$35.00</div>
                                 <div
                                     className="text-center underline mt-1 text-button-uppercase duration-300 text-secondary2 hover:text-black">
                                     View
@@ -81,7 +81,7 @@ const PopularProduct = () => {
                             </div>
                             <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct('13')}>
                                 <div className="text-title name">Mesh Shirt</div>
-                                <div className="price text-center">₹35.00</div>
+                                <div className="price text-center">$35.00</div>
                                 <div
                                     className="text-center underline mt-1 text-button-uppercase duration-300 text-secondary2 hover:text-black">
                                     View
@@ -104,7 +104,7 @@ const PopularProduct = () => {
                             </div>
                             <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct('21')}>
                                 <div className="text-title name">T-Shirt Pockets</div>
-                                <div className="price text-center">₹19.00</div>
+                                <div className="price text-center">$19.00</div>
                                 <div
                                     className="text-center underline mt-1 text-button-uppercase duration-300 text-secondary2 hover:text-black">
                                     View
@@ -117,7 +117,7 @@ const PopularProduct = () => {
                             </div>
                             <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct('21')}>
                                 <div className="text-title name">T-Shirt Pockets</div>
-                                <div className="price text-center">₹19.00</div>
+                                <div className="price text-center">$19.00</div>
                                 <div
                                     className="text-center underline mt-1 text-button-uppercase duration-300 text-secondary2 hover:text-black">
                                     View

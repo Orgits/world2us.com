@@ -14,7 +14,7 @@ interface Props {
 const BannerTop: React.FC<Props> = ({ props, textColor }) => {
     return (
         <>
-            <div className={`banner-top style-four w-full ₹{props}`}>
+            <div className={`banner-top style-four w-full ${props}`}>
                 <div className="container flex items-center justify-center">
                     <div className="sm:w-2/3 w-full h-full">
                         <Swiper
@@ -29,19 +29,19 @@ const BannerTop: React.FC<Props> = ({ props, textColor }) => {
                             }}
                         >
                             <SwiperSlide>
-                                <div className={`text-button-uppercase px-8 text-center ₹{textColor}`}>Get 10% off on selected items</div>
+                                <div className={`text-button-uppercase px-8 text-center ${textColor}`}>Get 10% off on selected items</div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className={`text-button-uppercase px-8 text-center ₹{textColor}`}>Free shipping on all orders over ₹50</div>
+                                <div className={`text-button-uppercase px-8 text-center ${textColor}`}>Free shipping on all orders over $50</div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className={`text-button-uppercase px-8 text-center ₹{textColor}`}>10% off on all summer essentials!</div>
+                                <div className={`text-button-uppercase px-8 text-center ${textColor}`}>10% off on all summer essentials!</div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className={`text-button-uppercase px-8 text-center ₹{textColor}`}>Get summer-ready: 10% off swim suits</div>
+                                <div className={`text-button-uppercase px-8 text-center ${textColor}`}>Get summer-ready: 10% off swim suits</div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className={`text-button-uppercase px-8 text-center ₹{textColor}`}>10% off on all product on shop</div>
+                                <div className={`text-button-uppercase px-8 text-center ${textColor}`}>10% off on all product on shop</div>
                             </SwiperSlide>
                         </Swiper>
                     </div>

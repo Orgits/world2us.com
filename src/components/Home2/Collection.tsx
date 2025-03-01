@@ -16,12 +16,12 @@ const Collection: React.FC<Props> = ({ props }) => {
     const router = useRouter()
 
     const handleTypeClick = (type: string) => {
-        router.push(`/shop/breadcrumb1?type=₹{type}`);
+        router.push(`/shop/breadcrumb1?type=${type}`);
     };
 
     return (
         <>
-            <div className={`collection-block ₹{props}`}>
+            <div className={`collection-block ${props}`}>
                 <div className="list-collection section-swiper-navigation sm:px-5 px-4">
                     <Swiper
                         spaceBetween={12}

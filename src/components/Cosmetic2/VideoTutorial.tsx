@@ -19,35 +19,35 @@ const VideoTutorial = () => {
                     <div className="list-category w-fit lg:py-[160px] sm:py-20 py-10">
                         <div
                             onClick={() => handleActiveVideo('1')}
-                            className={`item flex items-center gap-3 cursor-pointer ₹{activeVideo === '1' ? 'active' : ''}`}
+                            className={`item flex items-center gap-3 cursor-pointer ${activeVideo === '1' ? 'active' : ''}`}
                         >
                             <Icon.CaretDoubleRight size={24} />
                             <div className="heading4 inline-block">Body treatment</div>
                         </div>
                         <div
                             onClick={() => handleActiveVideo('2')}
-                            className={`item flex items-center gap-3 cursor-pointer sm:mt-7 mt-4 ₹{activeVideo === '2' ? 'active' : ''}`}
+                            className={`item flex items-center gap-3 cursor-pointer sm:mt-7 mt-4 ${activeVideo === '2' ? 'active' : ''}`}
                         >
                             <Icon.CaretDoubleRight size={24} />
                             <div className="heading4 inline-block">professinal makeup</div>
                         </div>
                         <div
                             onClick={() => handleActiveVideo('3')}
-                            className={`item flex items-center gap-3 cursor-pointer sm:mt-7 mt-4 ₹{activeVideo === '3' ? 'active' : ''}`}
+                            className={`item flex items-center gap-3 cursor-pointer sm:mt-7 mt-4 ${activeVideo === '3' ? 'active' : ''}`}
                         >
                             <Icon.CaretDoubleRight size={24} />
                             <div className="heading4 inline-block">Haircut & Coloring</div>
                         </div>
                         <div
                             onClick={() => handleActiveVideo('4')}
-                            className={`item flex items-center gap-3 cursor-pointer sm:mt-7 mt-4 ₹{activeVideo === '4' ? 'active' : ''}`}
+                            className={`item flex items-center gap-3 cursor-pointer sm:mt-7 mt-4 ${activeVideo === '4' ? 'active' : ''}`}
                         >
                             <Icon.CaretDoubleRight size={24} />
                             <div className="heading4 inline-block">Maincure & pedicure</div>
                         </div>
                         <div
                             onClick={() => handleActiveVideo('5')}
-                            className={`item flex items-center gap-3 cursor-pointer sm:mt-7 mt-4 ₹{activeVideo === '5' ? 'active' : ''}`}
+                            className={`item flex items-center gap-3 cursor-pointer sm:mt-7 mt-4 ${activeVideo === '5' ? 'active' : ''}`}
                         >
                             <Icon.CaretDoubleRight size={24} />
                             <div className="heading4 inline-block">Skincare tutorial</div>
@@ -56,7 +56,7 @@ const VideoTutorial = () => {
                 </div>
                 <div className="list-video sm:absolute max-sm:relative top-0 right-0 bottom-0 w-1/2 max-sm:w-full">
                     <div
-                        className={`bg-video w-full h-full ₹{activeVideo === '1' ? 'active' : ''}`}
+                        className={`bg-video w-full h-full ${activeVideo === '1' ? 'active' : ''}`}
                         data-item="1"
                     >
                         <div className="bg-img w-full h-full">
@@ -76,7 +76,7 @@ const VideoTutorial = () => {
                         </div>
                     </div>
                     <div
-                        className={`bg-video w-full h-full ₹{activeVideo === '2' ? 'active' : ''}`}
+                        className={`bg-video w-full h-full ${activeVideo === '2' ? 'active' : ''}`}
                         data-item="2"
                     >
                         <div className="bg-img w-full h-full">
@@ -96,7 +96,7 @@ const VideoTutorial = () => {
                         </div>
                     </div>
                     <div
-                        className={`bg-video w-full h-full ₹{activeVideo === '3' ? 'active' : ''}`}
+                        className={`bg-video w-full h-full ${activeVideo === '3' ? 'active' : ''}`}
                         data-item="3"
                     >
                         <div className="bg-img w-full h-full">
@@ -116,7 +116,7 @@ const VideoTutorial = () => {
                         </div>
                     </div>
                     <div
-                        className={`bg-video w-full h-full ₹{activeVideo === '4' ? 'active' : ''}`}
+                        className={`bg-video w-full h-full ${activeVideo === '4' ? 'active' : ''}`}
                         data-item="4"
                     >
                         <div className="bg-img w-full h-full">
@@ -136,7 +136,7 @@ const VideoTutorial = () => {
                         </div>
                     </div>
                     <div
-                        className={`bg-video w-full h-full ₹{activeVideo === '5' ? 'active' : ''}`}
+                        className={`bg-video w-full h-full ${activeVideo === '5' ? 'active' : ''}`}
                         data-item="5"
                     >
                         <div className="bg-img w-full h-full">
@@ -158,7 +158,7 @@ const VideoTutorial = () => {
                 </div>
                 <div className={`modal-video-block`} onClick={() => setOpenVideo(false)}>
                     <div
-                        className={`modal-video-main ₹{openVideo ? 'open' : ''}`}
+                        className={`modal-video-main ${openVideo ? 'open' : ''}`}
                         onClick={(e) => { e.stopPropagation() }}
                     >
                         <iframe src="https://www.youtube.com/embed/CxZI6R1VKJY?si=VB9g1QxpuTyoYFls" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>

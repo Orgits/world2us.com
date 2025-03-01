@@ -168,9 +168,9 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                             <span className='caption1 text-secondary2'>(1.234 reviews)</span>
                         </div>
                         <div className="flex items-center gap-3 flex-wrap mt-5 pb-6 border-b border-line">
-                            <div className="product-price heading5 text-white">₹{productMain.price}.00</div>
+                            <div className="product-price heading5 text-white">${productMain.price}.00</div>
                             <div className='w-px h-4 bg-line'></div>
-                            <div className="product-origin-price font-normal text-secondary2"><del>₹{productMain.originPrice}.00</del></div>
+                            <div className="product-origin-price font-normal text-secondary2"><del>${productMain.originPrice}.00</del></div>
                             {productMain.originPrice && (
                                 <div className="product-sale caption2 font-semibold bg-green px-3 py-0.5 inline-block rounded-full">
                                     -{percentSale}%
@@ -184,7 +184,7 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                                 <div className="list-color flex items-center gap-2 flex-wrap mt-3">
                                     {productMain.variation.map((item, index) => (
                                         <div
-                                            className={`color-item w-12 h-12 rounded-xl duration-300 relative ₹{activeColor === item.color ? 'active' : ''}`}
+                                            className={`color-item w-12 h-12 rounded-xl duration-300 relative ${activeColor === item.color ? 'active' : ''}`}
                                             key={index}
                                             onClick={() => handleActiveColor(item.color)}
                                         >
@@ -205,13 +205,13 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                             <div className="choose-size mt-5">
                                 <div className="heading flex items-center justify-between">
                                     <div className="text-title text-white">Size:
-                                        <span className='text-title size pl-1'>{activeSize ? `₹{activeSize}mm` : ''}</span>
+                                        <span className='text-title size pl-1'>{activeSize ? `${activeSize}mm` : ''}</span>
                                     </div>
                                 </div>
                                 <div className="list-size flex items-center gap-2 flex-wrap mt-3">
                                     {productMain.sizes.map((item, index) => (
                                         <div
-                                            className={`size-item py-3 px-4 flex items-center justify-center text-button normal-case rounded-xl bg-white border border-line ₹{activeSize === item ? 'active' : ''}`}
+                                            className={`size-item py-3 px-4 flex items-center justify-center text-button normal-case rounded-xl bg-white border border-line ${activeSize === item ? 'active' : ''}`}
                                             key={index}
                                             onClick={() => handleActiveSize(item)}
                                         >
@@ -225,7 +225,7 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                                     <Icon.Minus
                                         size={20}
                                         onClick={handleDecreaseQuantity}
-                                        className={`₹{productMain.quantityPurchase === 1 ? 'disabled' : ''} cursor-pointer text-white`}
+                                        className={`${productMain.quantityPurchase === 1 ? 'disabled' : ''} cursor-pointer text-white`}
                                     />
                                     <div className="body1 font-semibold text-white">{productMain.quantityPurchase}</div>
                                     <Icon.Plus

@@ -27,7 +27,7 @@ const BlogList = () => {
 
     const handleBlogClick = (blogId: string) => {
         // Go to blog detail with blogId selected
-        router.push(`/blog/detail1?id=₹{blogId}`);
+        router.push(`/blog/detail1?id=${blogId}`);
     };
 
     let filteredData = blogData.filter(blog => {
@@ -128,7 +128,7 @@ const BlogList = () => {
                                 <div className="heading6">Categories</div>
                                 <div className="list-cate pt-1">
                                     <div
-                                        className={`cate-item flex items-center justify-between cursor-pointer mt-3 ₹{category === 'fashion' ? 'active' : ''}`}
+                                        className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${category === 'fashion' ? 'active' : ''}`}
                                         onClick={() => handleCategory('fashion')}
                                     >
                                         <div className='capitalize has-line-before hover:text-black text-secondary'>Fashion</div>
@@ -137,7 +137,7 @@ const BlogList = () => {
                                         </div>
                                     </div>
                                     <div
-                                        className={`cate-item flex items-center justify-between cursor-pointer mt-3 ₹{category === 'cosmetic' ? 'active' : ''}`}
+                                        className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${category === 'cosmetic' ? 'active' : ''}`}
                                         onClick={() => handleCategory('cosmetic')}
                                     >
                                         <div className='capitalize has-line-before hover:text-black text-secondary'>cosmetic</div>
@@ -146,7 +146,7 @@ const BlogList = () => {
                                         </div>
                                     </div>
                                     <div
-                                        className={`cate-item flex items-center justify-between cursor-pointer mt-3 ₹{category === 'toys-kid' ? 'active' : ''}`}
+                                        className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${category === 'toys-kid' ? 'active' : ''}`}
                                         onClick={() => handleCategory('toys-kid')}
                                     >
                                         <div className='capitalize has-line-before hover:text-black text-secondary'>toys kid</div>
@@ -155,7 +155,7 @@ const BlogList = () => {
                                         </div>
                                     </div>
                                     <div
-                                        className={`cate-item flex items-center justify-between cursor-pointer mt-3 ₹{category === 'yoga' ? 'active' : ''}`}
+                                        className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${category === 'yoga' ? 'active' : ''}`}
                                         onClick={() => handleCategory('yoga')}
                                     >
                                         <div className='capitalize has-line-before hover:text-black text-secondary'>yoga</div>
@@ -164,7 +164,7 @@ const BlogList = () => {
                                         </div>
                                     </div>
                                     <div
-                                        className={`cate-item flex items-center justify-between cursor-pointer mt-3 ₹{category === 'organic' ? 'active' : ''}`}
+                                        className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${category === 'organic' ? 'active' : ''}`}
                                         onClick={() => handleCategory('organic')}
                                     >
                                         <div className='capitalize has-line-before hover:text-black text-secondary'>organic</div>
@@ -178,31 +178,31 @@ const BlogList = () => {
                                 <div className="heading6">Tags Cloud</div>
                                 <div className="list-tags flex items-center flex-wrap gap-3 mt-4">
                                     <div
-                                        className={`tags bg-white border border-line py-1.5 px-4 rounded-full text-button-uppercase text-secondary cursor-pointer duration-300 hover:bg-black hover:text-white ₹{category === 'fashion' ? 'active' : ''}`}
+                                        className={`tags bg-white border border-line py-1.5 px-4 rounded-full text-button-uppercase text-secondary cursor-pointer duration-300 hover:bg-black hover:text-white ${category === 'fashion' ? 'active' : ''}`}
                                         onClick={() => handleCategory('fashion')}
                                     >
                                         fashion
                                     </div>
                                     <div
-                                        className={`tags bg-white border border-line py-1.5 px-4 rounded-full text-button-uppercase text-secondary cursor-pointer duration-300 hover:bg-black hover:text-white ₹{category === 'cosmetic' ? 'active' : ''}`}
+                                        className={`tags bg-white border border-line py-1.5 px-4 rounded-full text-button-uppercase text-secondary cursor-pointer duration-300 hover:bg-black hover:text-white ${category === 'cosmetic' ? 'active' : ''}`}
                                         onClick={() => handleCategory('cosmetic')}
                                     >
                                         cosmetic
                                     </div>
                                     <div
-                                        className={`tags bg-white border border-line py-1.5 px-4 rounded-full text-button-uppercase text-secondary cursor-pointer duration-300 hover:bg-black hover:text-white ₹{category === 'toy-kid' ? 'active' : ''}`}
+                                        className={`tags bg-white border border-line py-1.5 px-4 rounded-full text-button-uppercase text-secondary cursor-pointer duration-300 hover:bg-black hover:text-white ${category === 'toy-kid' ? 'active' : ''}`}
                                         onClick={() => handleCategory('toys-kid')}
                                     >
                                         toys kid
                                     </div>
                                     <div
-                                        className={`tags bg-white border border-line py-1.5 px-4 rounded-full text-button-uppercase text-secondary cursor-pointer duration-300 hover:bg-black hover:text-white ₹{category === 'yoga' ? 'active' : ''}`}
+                                        className={`tags bg-white border border-line py-1.5 px-4 rounded-full text-button-uppercase text-secondary cursor-pointer duration-300 hover:bg-black hover:text-white ${category === 'yoga' ? 'active' : ''}`}
                                         onClick={() => handleCategory('yoga')}
                                     >
                                         yoga
                                     </div>
                                     <div
-                                        className={`tags bg-white border border-line py-1.5 px-4 rounded-full text-button-uppercase text-secondary cursor-pointer duration-300 hover:bg-black hover:text-white ₹{category === 'organic' ? 'active' : ''}`}
+                                        className={`tags bg-white border border-line py-1.5 px-4 rounded-full text-button-uppercase text-secondary cursor-pointer duration-300 hover:bg-black hover:text-white ${category === 'organic' ? 'active' : ''}`}
                                         onClick={() => handleCategory('organic')}
                                     >
                                         organic

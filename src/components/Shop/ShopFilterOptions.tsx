@@ -209,7 +209,7 @@ const ShopFilterOptions: React.FC<Props> = ({ data, productPerPage }) => {
                                 {['t-shirt', 'dress', 'top', 'swimwear', 'shirt'].map((item, index) => (
                                     <div
                                         key={index}
-                                        className={`tab-item text-button-uppercase cursor-pointer has-line-before line-2px ₹{type === item ? 'active' : ''}`}
+                                        className={`tab-item text-button-uppercase cursor-pointer has-line-before line-2px ${type === item ? 'active' : ''}`}
                                         onClick={() => handleType(item)}
                                     >
                                         {item}
@@ -228,7 +228,7 @@ const ShopFilterOptions: React.FC<Props> = ({ data, productPerPage }) => {
                             <div className="left flex items-center flex-wrap gap-5">
                                 <div className="choose-layout flex items-center gap-2">
                                     <div
-                                        className={`item three-col p-2 border border-line rounded flex items-center justify-center cursor-pointer ₹{layoutCol === 3 ? 'active' : ''}`}
+                                        className={`item three-col p-2 border border-line rounded flex items-center justify-center cursor-pointer ${layoutCol === 3 ? 'active' : ''}`}
                                         onClick={() => handleLayoutCol(3)}
                                     >
                                         <div className='flex items-center gap-0.5'>
@@ -238,7 +238,7 @@ const ShopFilterOptions: React.FC<Props> = ({ data, productPerPage }) => {
                                         </div>
                                     </div>
                                     <div
-                                        className={`item four-col p-2 border border-line rounded flex items-center justify-center cursor-pointer ₹{layoutCol === 4 ? 'active' : ''}`}
+                                        className={`item four-col p-2 border border-line rounded flex items-center justify-center cursor-pointer ${layoutCol === 4 ? 'active' : ''}`}
                                         onClick={() => handleLayoutCol(4)}
                                     >
                                         <div className='flex items-center gap-0.5'>
@@ -249,7 +249,7 @@ const ShopFilterOptions: React.FC<Props> = ({ data, productPerPage }) => {
                                         </div>
                                     </div>
                                     <div
-                                        className={`item five-col p-2 border border-line rounded flex items-center justify-center cursor-pointer ₹{layoutCol === 5 ? 'active' : ''}`}
+                                        className={`item five-col p-2 border border-line rounded flex items-center justify-center cursor-pointer ${layoutCol === 5 ? 'active' : ''}`}
                                         onClick={() => handleLayoutCol(5)}
                                     >
                                         <div className='flex items-center gap-0.5'>
@@ -285,7 +285,7 @@ const ShopFilterOptions: React.FC<Props> = ({ data, productPerPage }) => {
                                         {['t-shirt', 'dress', 'top', 'swimwear', 'shirt', 'underwear', 'sets', 'accessories'].map((item, index) => (
                                             <option
                                                 key={index}
-                                                className={`item cursor-pointer ₹{type === item ? 'active' : ''}`}
+                                                className={`item cursor-pointer ${type === item ? 'active' : ''}`}
                                             >
                                                 {item}
                                             </option>
@@ -305,7 +305,7 @@ const ShopFilterOptions: React.FC<Props> = ({ data, productPerPage }) => {
                                         {['XS', 'S', 'M', 'L', 'XL', '2XL', 'freesize'].map((item, index) => (
                                             <option
                                                 key={index}
-                                                className={`item cursor-pointer ₹{size === item ? 'active' : ''}`}
+                                                className={`item cursor-pointer ${size === item ? 'active' : ''}`}
                                             >
                                                 {item}
                                             </option>
@@ -325,7 +325,7 @@ const ShopFilterOptions: React.FC<Props> = ({ data, productPerPage }) => {
                                         {['red', 'green', 'yellow', 'purple', 'black', 'pink', 'white'].map((item, index) => (
                                             <option
                                                 key={index}
-                                                className={`item cursor-pointer ₹{color === item ? 'active' : ''}`}
+                                                className={`item cursor-pointer ${color === item ? 'active' : ''}`}
                                             >
                                                 {item}
                                             </option>
@@ -345,7 +345,7 @@ const ShopFilterOptions: React.FC<Props> = ({ data, productPerPage }) => {
                                         {['adidas', 'hermes', 'zara', 'nike', 'gucci'].map((item, index) => (
                                             <option
                                                 key={index}
-                                                className={`item cursor-pointer ₹{brand === item ? 'active' : ''}`}
+                                                className={`item cursor-pointer ${brand === item ? 'active' : ''}`}
                                             >
                                                 {item}
                                             </option>
@@ -419,7 +419,7 @@ const ShopFilterOptions: React.FC<Props> = ({ data, productPerPage }) => {
                             }
                         </div>
 
-                        <div className={`list-product hide-product-sold grid lg:grid-cols-₹{layoutCol} sm:grid-cols-3 grid-cols-2 sm:gap-[30px] gap-[20px] mt-7`}>
+                        <div className={`list-product hide-product-sold grid lg:grid-cols-${layoutCol} sm:grid-cols-3 grid-cols-2 sm:gap-[30px] gap-[20px] mt-7`}>
                             {currentProducts.map((item) => (
                                 item.id === 'no-data' ? (
                                     <div key={item.id} className="no-data-product">No products match the selected criteria.</div>

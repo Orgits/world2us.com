@@ -49,19 +49,19 @@ const MyAccount = () => {
                                     <div className="mail heading6 font-normal normal-case text-secondary text-center mt-1">contact@world2us.com</div>
                                 </div>
                                 <div className="menu-tab w-full max-w-none lg:mt-10 mt-6">
-                                    <Link href={'#!'} scroll={false} className={`item flex items-center gap-3 w-full px-5 py-4 rounded-lg cursor-pointer duration-300 hover:bg-white ₹{activeTab === 'dashboard' ? 'active' : ''}`} onClick={() => setActiveTab('dashboard')}>
+                                    <Link href={'#!'} scroll={false} className={`item flex items-center gap-3 w-full px-5 py-4 rounded-lg cursor-pointer duration-300 hover:bg-white ${activeTab === 'dashboard' ? 'active' : ''}`} onClick={() => setActiveTab('dashboard')}>
                                         <Icon.HouseLine size={20} />
                                         <strong className="heading6">Dashboard</strong>
                                     </Link>
-                                    <Link href={'#!'} scroll={false} className={`item flex items-center gap-3 w-full px-5 py-4 rounded-lg cursor-pointer duration-300 hover:bg-white mt-1.5 ₹{activeTab === 'orders' ? 'active' : ''}`} onClick={() => setActiveTab('orders')}>
+                                    <Link href={'#!'} scroll={false} className={`item flex items-center gap-3 w-full px-5 py-4 rounded-lg cursor-pointer duration-300 hover:bg-white mt-1.5 ${activeTab === 'orders' ? 'active' : ''}`} onClick={() => setActiveTab('orders')}>
                                         <Icon.Package size={20} />
                                         <strong className="heading6">History Orders</strong>
                                     </Link>
-                                    <Link href={'#!'} scroll={false} className={`item flex items-center gap-3 w-full px-5 py-4 rounded-lg cursor-pointer duration-300 hover:bg-white mt-1.5 ₹{activeTab === 'address' ? 'active' : ''}`} onClick={() => setActiveTab('address')}>
+                                    <Link href={'#!'} scroll={false} className={`item flex items-center gap-3 w-full px-5 py-4 rounded-lg cursor-pointer duration-300 hover:bg-white mt-1.5 ${activeTab === 'address' ? 'active' : ''}`} onClick={() => setActiveTab('address')}>
                                         <Icon.Tag size={20} />
                                         <strong className="heading6">My Address</strong>
                                     </Link>
-                                    <Link href={'#!'} scroll={false} className={`item flex items-center gap-3 w-full px-5 py-4 rounded-lg cursor-pointer duration-300 hover:bg-white mt-1.5 ₹{activeTab === 'setting' ? 'active' : ''}`} onClick={() => setActiveTab('setting')}>
+                                    <Link href={'#!'} scroll={false} className={`item flex items-center gap-3 w-full px-5 py-4 rounded-lg cursor-pointer duration-300 hover:bg-white mt-1.5 ${activeTab === 'setting' ? 'active' : ''}`} onClick={() => setActiveTab('setting')}>
                                         <Icon.GearSix size={20} />
                                         <strong className="heading6">Setting</strong>
                                     </Link>
@@ -73,7 +73,7 @@ const MyAccount = () => {
                             </div>
                         </div>
                         <div className="right md:w-2/3 w-full pl-2.5">
-                            <div className={`tab text-content w-full ₹{activeTab === 'dashboard' ? 'block' : 'hidden'}`}>
+                            <div className={`tab text-content w-full ${activeTab === 'dashboard' ? 'block' : 'hidden'}`}>
                                 <div className="overview grid sm:grid-cols-3 gap-5">
                                     <div className="item flex items-center justify-between p-5 border border-line rounded-lg box-shadow-xs">
                                         <div className="counter">
@@ -123,7 +123,7 @@ const MyAccount = () => {
                                                             </div>
                                                         </Link>
                                                     </td>
-                                                    <td className="py-3 price">₹45.00</td>
+                                                    <td className="py-3 price">$45.00</td>
                                                     <td className="py-3 text-right">
                                                         <span className="tag px-4 py-1.5 rounded-full bg-opacity-10 bg-yellow text-yellow caption1 font-semibold">Pending</span>
                                                     </td>
@@ -141,7 +141,7 @@ const MyAccount = () => {
                                                             </div>
                                                         </Link>
                                                     </td>
-                                                    <td className="py-3 price">₹45.00</td>
+                                                    <td className="py-3 price">$45.00</td>
                                                     <td className="py-3 text-right">
                                                         <span className="tag px-4 py-1.5 rounded-full bg-opacity-10 bg-purple text-purple caption1 font-semibold">Delivery</span>
                                                     </td>
@@ -159,7 +159,7 @@ const MyAccount = () => {
                                                             </div>
                                                         </Link>
                                                     </td>
-                                                    <td className="py-3 price">₹45.00</td>
+                                                    <td className="py-3 price">$45.00</td>
                                                     <td className="py-3 text-right">
                                                         <span className="tag px-4 py-1.5 rounded-full bg-opacity-10 bg-success text-success caption1 font-semibold">Completed</span>
                                                     </td>
@@ -177,7 +177,7 @@ const MyAccount = () => {
                                                             </div>
                                                         </Link>
                                                     </td>
-                                                    <td className="py-3 price">₹45.00</td>
+                                                    <td className="py-3 price">$45.00</td>
                                                     <td className="py-3 text-right">
                                                         <span className="tag px-4 py-1.5 rounded-full bg-opacity-10 bg-yellow text-yellow caption1 font-semibold">Pending</span>
                                                     </td>
@@ -195,7 +195,7 @@ const MyAccount = () => {
                                                             </div>
                                                         </Link>
                                                     </td>
-                                                    <td className="py-3 price">₹45.00</td>
+                                                    <td className="py-3 price">$45.00</td>
                                                     <td className="py-3 text-right">
                                                         <span className="tag px-4 py-1.5 rounded-full bg-opacity-10 bg-purple text-purple caption1 font-semibold">Delivery</span>
                                                     </td>
@@ -213,7 +213,7 @@ const MyAccount = () => {
                                                             </div>
                                                         </Link>
                                                     </td>
-                                                    <td className="py-3 price">₹45.00</td>
+                                                    <td className="py-3 price">$45.00</td>
                                                     <td className="py-3 text-right">
                                                         <span className="tag px-4 py-1.5 rounded-full bg-opacity-10 bg-red text-red caption1 font-semibold">Canceled</span>
                                                     </td>
@@ -223,14 +223,14 @@ const MyAccount = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className={`tab text-content overflow-hidden w-full p-7 border border-line rounded-xl ₹{activeTab === 'orders' ? 'block' : 'hidden'}`}>
+                            <div className={`tab text-content overflow-hidden w-full p-7 border border-line rounded-xl ${activeTab === 'orders' ? 'block' : 'hidden'}`}>
                                 <h6 className="heading6">Your Orders</h6>
                                 <div className="w-full overflow-x-auto">
                                     <div className="menu-tab grid grid-cols-5 max-lg:w-[500px] border-b border-line mt-3">
                                         {['all', 'pending', 'delivery', 'completed', 'canceled'].map((item, index) => (
                                             <button
                                                 key={index}
-                                                className={`item relative px-3 py-2.5 text-secondary text-center duration-300 hover:text-black border-b-2 ₹{activeOrders === item ? 'active border-black' : 'border-transparent'}`}
+                                                className={`item relative px-3 py-2.5 text-secondary text-center duration-300 hover:text-black border-b-2 ${activeOrders === item ? 'active border-black' : 'border-transparent'}`}
                                                 onClick={() => handleActiveOrders(item)}
                                             >
                                                 {/* {activeOrders === item && (
@@ -279,7 +279,7 @@ const MyAccount = () => {
                                                 <div className='text-title'>
                                                     <span className="prd_quantity">1</span>
                                                     <span> X </span>
-                                                    <span className="prd_price">₹45.00</span>
+                                                    <span className="prd_price">$45.00</span>
                                                 </div>
                                             </div>
                                             <div className="prd_item flex flex-wrap items-center justify-between gap-3 py-5 border-b border-line">
@@ -305,7 +305,7 @@ const MyAccount = () => {
                                                 <div className='text-title'>
                                                     <span className="prd_quantity">2</span>
                                                     <span> X </span>
-                                                    <span className="prd_price">₹70.00</span>
+                                                    <span className="prd_price">$70.00</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -349,7 +349,7 @@ const MyAccount = () => {
                                                 <div className='text-title'>
                                                     <span className="prd_quantity">1</span>
                                                     <span> X </span>
-                                                    <span className="prd_price">₹69.00</span>
+                                                    <span className="prd_price">$69.00</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -393,7 +393,7 @@ const MyAccount = () => {
                                                 <div className='text-title'>
                                                     <span className="prd_quantity">1</span>
                                                     <span> X </span>
-                                                    <span className="prd_price">₹32.00</span>
+                                                    <span className="prd_price">$32.00</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -437,7 +437,7 @@ const MyAccount = () => {
                                                 <div className='text-title'>
                                                     <span className="prd_quantity">1</span>
                                                     <span> X </span>
-                                                    <span className="prd_price">₹49.00</span>
+                                                    <span className="prd_price">$49.00</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -448,17 +448,17 @@ const MyAccount = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className={`tab_address text-content w-full p-7 border border-line rounded-xl ₹{activeTab === 'address' ? 'block' : 'hidden'}`}>
+                            <div className={`tab_address text-content w-full p-7 border border-line rounded-xl ${activeTab === 'address' ? 'block' : 'hidden'}`}>
                                 <form>
                                     <button
                                         type='button'
-                                        className={`tab_btn flex items-center justify-between w-full pb-1.5 border-b border-line ₹{activeAddress === 'billing' ? 'active' : ''}`}
+                                        className={`tab_btn flex items-center justify-between w-full pb-1.5 border-b border-line ${activeAddress === 'billing' ? 'active' : ''}`}
                                         onClick={() => handleActiveAddress('billing')}
                                     >
                                         <strong className="heading6">Billing address</strong>
                                         <Icon.CaretDown className='text-2xl ic_down duration-300' />
                                     </button>
-                                    <div className={`form_address ₹{activeAddress === 'billing' ? 'block' : 'hidden'}`}>
+                                    <div className={`form_address ${activeAddress === 'billing' ? 'block' : 'hidden'}`}>
                                         <div className='grid sm:grid-cols-2 gap-4 gap-y-5 mt-5'>
                                             <div className="first-name">
                                                 <label htmlFor="billingFirstName" className='caption1 capitalize'>First Name <span className='text-red'>*</span></label>
@@ -504,13 +504,13 @@ const MyAccount = () => {
                                     </div>
                                     <button
                                         type='button'
-                                        className={`tab_btn flex items-center justify-between w-full mt-10 pb-1.5 border-b border-line ₹{activeAddress === 'shipping' ? 'active' : ''}`}
+                                        className={`tab_btn flex items-center justify-between w-full mt-10 pb-1.5 border-b border-line ${activeAddress === 'shipping' ? 'active' : ''}`}
                                         onClick={() => handleActiveAddress('shipping')}
                                     >
                                         <strong className="heading6">Shipping address</strong>
                                         <Icon.CaretDown className='text-2xl ic_down duration-300' />
                                     </button>
-                                    <div className={`form_address ₹{activeAddress === 'shipping' ? 'block' : 'hidden'}`}>
+                                    <div className={`form_address ${activeAddress === 'shipping' ? 'block' : 'hidden'}`}>
                                         <div className='grid sm:grid-cols-2 gap-4 gap-y-5 mt-5'>
                                             <div className="first-name">
                                                 <label htmlFor="shippingFirstName" className='caption1 capitalize'>First Name <span className='text-red'>*</span></label>
@@ -559,7 +559,7 @@ const MyAccount = () => {
                                     </div>
                                 </form>
                             </div>
-                            <div className={`tab text-content w-full p-7 border border-line rounded-xl ₹{activeTab === 'setting' ? 'block' : 'hidden'}`}>
+                            <div className={`tab text-content w-full p-7 border border-line rounded-xl ${activeTab === 'setting' ? 'block' : 'hidden'}`}>
                                 <form>
                                     <div className="heading5 pb-4">Information</div>
                                     <div className="upload_image col-span-full">
@@ -643,7 +643,7 @@ const MyAccount = () => {
             </div>
             <Footer />
             <div className={`modal-order-detail-block flex items-center justify-center`} onClick={() => setOpenDetail(false)}>
-                <div className={`modal-order-detail-main grid grid-cols-2 w-[1160px] bg-white rounded-2xl ₹{openDetail ? 'open' : ''}`} onClick={(e) => e.stopPropagation()}>
+                <div className={`modal-order-detail-main grid grid-cols-2 w-[1160px] bg-white rounded-2xl ${openDetail ? 'open' : ''}`} onClick={(e) => e.stopPropagation()}>
                     <div className="info p-10 border-r border-line">
                         <h5 className="heading5">Order Details</h5>
                         <div className="list_info grid grid-cols-2 gap-10 gap-y-8 mt-5">
@@ -697,7 +697,7 @@ const MyAccount = () => {
                                 <div className='text-title'>
                                     <span className="prd_quantity">1</span>
                                     <span> X </span>
-                                    <span className="prd_price">₹45.00</span>
+                                    <span className="prd_price">$45.00</span>
                                 </div>
                             </div>
                             <div className="prd_item flex flex-wrap items-center justify-between gap-3 py-5 border-b border-line">
@@ -723,7 +723,7 @@ const MyAccount = () => {
                                 <div className='text-title'>
                                     <span className="prd_quantity">2</span>
                                     <span> X </span>
-                                    <span className="prd_price">₹70.00</span>
+                                    <span className="prd_price">$70.00</span>
                                 </div>
                             </div>
                         </div>
@@ -733,11 +733,11 @@ const MyAccount = () => {
                         </div>
                         <div className="flex items-center justify-between mt-4">
                             <strong className="text-title">Discounts</strong>
-                            <strong className="order_discounts text-title">-₹80.00</strong>
+                            <strong className="order_discounts text-title">-$80.00</strong>
                         </div>
                         <div className="flex items-center justify-between mt-5 pt-5 border-t border-line">
                             <h5 className="heading5">Subtotal</h5>
-                            <h5 className="order_total heading5">₹105.00</h5>
+                            <h5 className="order_total heading5">$105.00</h5>
                         </div>
                     </div>
                 </div>
