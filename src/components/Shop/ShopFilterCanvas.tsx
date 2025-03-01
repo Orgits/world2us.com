@@ -9,12 +9,12 @@ import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css'
 import HandlePagination from '../Other/HandlePagination';
 
-interface Props {
-    data: Array<ProductType>;
-    productPerPage: number
-    dataType: string | null
-    productStyle: string
-}
+type Props = {
+    data: ProductType[];
+    productPerPage: number;
+    dataType: string | null;
+    productStyle?: string; // Make it optional
+};
 
 const ShopFilterCanvas: React.FC<Props> = ({ data, productPerPage, dataType, productStyle }) => {
     const [layoutCol, setLayoutCol] = useState<number | null>(4)
