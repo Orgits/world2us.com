@@ -17,9 +17,9 @@ import Marquee from 'react-fast-marquee'
 import Rate from '../Other/Rate'
 
 interface ProductProps {
-    data: ProductType
-    type: string
-    style: string
+    data: ProductType;
+    type: string;
+    style?: string; // <-- Make it optional
 }
 
 const Product: React.FC<ProductProps> = ({ data, type, style }) => {
