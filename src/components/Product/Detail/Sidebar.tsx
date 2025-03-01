@@ -59,11 +59,11 @@ const Sidebar: React.FC<Props> = ({ data, productId }) => {
     };
 
     const handleTypeClick = (type: string) => {
-        router.push(`/shop/breadcrumb1?type=${type}`);
+        router.push(`/shop/breadcrumb1?type=₹{type}`);
     };
 
     const handleProductClick = (productId: string) => {
-        router.push(`/product/sidebar?id=${productId}`);
+        router.push(`/product/sidebar?id=₹{productId}`);
     };
 
     const handleSwiper = (swiper: SwiperCore) => {
@@ -161,7 +161,7 @@ const Sidebar: React.FC<Props> = ({ data, productId }) => {
                                         <div className="icon-delivery-truck text-4xl"></div>
                                         <div>
                                             <div className="text-title">Free Shipping</div>
-                                            <div className="text-secondary mt-1">Free Shipping for orders over $90</div>
+                                            <div className="text-secondary mt-1">Free Shipping for orders over ₹90</div>
                                         </div>
                                     </div>
                                     <div className="item flex gap-4 mt-5">
@@ -205,7 +205,7 @@ const Sidebar: React.FC<Props> = ({ data, productId }) => {
                                             />
                                             <div>
                                                 <div className="text-title">{item.name}</div>
-                                                <div className="text-title mt-1">${item.price}.00</div>
+                                                <div className="text-title mt-1">₹{item.price}.00</div>
                                             </div>
                                         </div>
                                     ))}
@@ -261,7 +261,7 @@ const Sidebar: React.FC<Props> = ({ data, productId }) => {
                                             </SwiperSlide>
                                         ))}
                                     </Swiper>
-                                    <div className={`popup-img ${openPopupImg ? 'open' : ''}`}>
+                                    <div className={`popup-img ₹{openPopupImg ? 'open' : ''}`}>
                                         <span
                                             className="close-popup-btn absolute top-4 right-4 z-[2] cursor-pointer"
                                             onClick={() => {
@@ -310,7 +310,7 @@ const Sidebar: React.FC<Props> = ({ data, productId }) => {
                                             <div className="heading4 mt-1">{productMain.name}</div>
                                         </div>
                                         <div
-                                            className={`add-wishlist-btn w-12 h-12 flex items-center justify-center border border-line cursor-pointer rounded-xl duration-300 hover:bg-black hover:text-white ${wishlistState.wishlistArray.some(item => item.id === productMain.id) ? 'active' : ''}`}
+                                            className={`add-wishlist-btn w-12 h-12 flex items-center justify-center border border-line cursor-pointer rounded-xl duration-300 hover:bg-black hover:text-white ₹{wishlistState.wishlistArray.some(item => item.id === productMain.id) ? 'active' : ''}`}
                                             onClick={handleAddToWishlist}
                                         >
                                             {wishlistState.wishlistArray.some(item => item.id === productMain.id) ? (
@@ -329,9 +329,9 @@ const Sidebar: React.FC<Props> = ({ data, productId }) => {
                                         <span className='caption1 text-secondary'>(1.234 reviews)</span>
                                     </div>
                                     <div className="flex items-center gap-3 flex-wrap mt-5 pb-6 border-b border-line">
-                                        <div className="product-price heading5">${productMain.price}.00</div>
+                                        <div className="product-price heading5">₹{productMain.price}.00</div>
                                         <div className='w-px h-4 bg-line'></div>
-                                        <div className="product-origin-price font-normal text-secondary2"><del>${productMain.originPrice}.00</del></div>
+                                        <div className="product-origin-price font-normal text-secondary2"><del>₹{productMain.originPrice}.00</del></div>
                                         {productMain.originPrice && (
                                             <div className="product-sale caption2 font-semibold bg-green px-3 py-0.5 inline-block rounded-full">
                                                 -{percentSale}%
@@ -345,7 +345,7 @@ const Sidebar: React.FC<Props> = ({ data, productId }) => {
                                             <div className="list-color flex items-center gap-2 flex-wrap mt-3">
                                                 {productMain.variation.map((item, index) => (
                                                     <div
-                                                        className={`color-item w-12 h-12 rounded-xl duration-300 relative ${activeColor === item.color ? 'active' : ''}`}
+                                                        className={`color-item w-12 h-12 rounded-xl duration-300 relative ₹{activeColor === item.color ? 'active' : ''}`}
                                                         key={index}
                                                         onClick={() => handleActiveColor(item.color)}
                                                     >
@@ -377,7 +377,7 @@ const Sidebar: React.FC<Props> = ({ data, productId }) => {
                                             <div className="list-size flex items-center gap-2 flex-wrap mt-3">
                                                 {productMain.sizes.map((item, index) => (
                                                     <div
-                                                        className={`size-item ${item === 'freesize' ? 'px-3 py-2' : 'w-12 h-12'} flex items-center justify-center text-button rounded-full bg-white border border-line ${activeSize === item ? 'active' : ''}`}
+                                                        className={`size-item ₹{item === 'freesize' ? 'px-3 py-2' : 'w-12 h-12'} flex items-center justify-center text-button rounded-full bg-white border border-line ₹{activeSize === item ? 'active' : ''}`}
                                                         key={index}
                                                         onClick={() => handleActiveSize(item)}
                                                     >
@@ -392,7 +392,7 @@ const Sidebar: React.FC<Props> = ({ data, productId }) => {
                                                 <Icon.Minus
                                                     size={20}
                                                     onClick={handleDecreaseQuantity}
-                                                    className={`${productMain.quantityPurchase === 1 ? 'disabled' : ''} cursor-pointer`}
+                                                    className={`₹{productMain.quantityPurchase === 1 ? 'disabled' : ''} cursor-pointer`}
                                                 />
                                                 <div className="body1 font-semibold">{productMain.quantityPurchase}</div>
                                                 <Icon.Plus
@@ -521,19 +521,19 @@ const Sidebar: React.FC<Props> = ({ data, productId }) => {
                                 <div className="flex items-center w-full">
                                     <div className="menu-tab flex items-center lg:gap-[60px] gap-8">
                                         <div
-                                            className={`tab-item heading5 has-line-before text-secondary2 hover:text-black duration-300 ${activeTab === 'description' ? 'active' : ''}`}
+                                            className={`tab-item heading5 has-line-before text-secondary2 hover:text-black duration-300 ₹{activeTab === 'description' ? 'active' : ''}`}
                                             onClick={() => handleActiveTab('description')}
                                         >
                                             Description
                                         </div>
                                         <div
-                                            className={`tab-item heading5 has-line-before text-secondary2 hover:text-black duration-300 ${activeTab === 'specifications' ? 'active' : ''}`}
+                                            className={`tab-item heading5 has-line-before text-secondary2 hover:text-black duration-300 ₹{activeTab === 'specifications' ? 'active' : ''}`}
                                             onClick={() => handleActiveTab('specifications')}
                                         >
                                             Specifications
                                         </div>
                                         <div
-                                            className={`tab-item heading5 has-line-before text-secondary2 hover:text-black duration-300 ${activeTab === 'review' ? 'active' : ''}`}
+                                            className={`tab-item heading5 has-line-before text-secondary2 hover:text-black duration-300 ₹{activeTab === 'review' ? 'active' : ''}`}
                                             onClick={() => handleActiveTab('review')}
                                         >
                                             Review
@@ -541,7 +541,7 @@ const Sidebar: React.FC<Props> = ({ data, productId }) => {
                                     </div>
                                 </div>
                                 <div className="desc-block mt-8">
-                                    <div className={`desc-item description ${activeTab === 'description' ? 'open' : ''}`}>
+                                    <div className={`desc-item description ₹{activeTab === 'description' ? 'open' : ''}`}>
                                         <div className='grid lg:grid-cols-2 gap-8 gap-y-5'>
                                             <div className="left">
                                                 <div className="heading6">Description</div>
@@ -596,7 +596,7 @@ const Sidebar: React.FC<Props> = ({ data, productId }) => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className={`desc-item specifications flex items-center ${activeTab === 'specifications' ? 'open' : ''}`}>
+                                    <div className={`desc-item specifications flex items-center ₹{activeTab === 'specifications' ? 'open' : ''}`}>
                                         <div className='lg:w-1/2 w-full'>
                                             <div className="item bg-surface flex items-center gap-8 py-3 px-10">
                                                 <div className="text-title sm:w-1/4 w-1/3">Rating</div>
@@ -666,7 +666,7 @@ const Sidebar: React.FC<Props> = ({ data, productId }) => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className={`desc-item review-block ${activeTab === 'review' ? 'open' : ''}`}>
+                                    <div className={`desc-item review-block ₹{activeTab === 'review' ? 'open' : ''}`}>
                                         <div className="top-overview flex max-lg:flex-col lg:items-center max-sm:items-center justify-between gap-12 gap-y-4">
                                             <div className="left flex max-sm:flex-col gap-y-4 items-center justify-between lg:w-1/2 w-full lg:pr-5">
                                                 <div className='rating black-start flex flex-col items-center'>

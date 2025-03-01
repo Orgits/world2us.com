@@ -14,7 +14,7 @@ const BannerBelow = () => {
                         </div>
                         <div className="banner-content relative">
                             <div className="heading5 text-white">Super Sale <br />Apple Watch</div>
-                            <div className="text-title text-white mt-2">Save $599.00</div>
+                            <div className="text-title text-white mt-2">Save ₹599.00</div>
                             <div
                                 className="text-button text-white relative inline-block pb-1 border-b-2 border-white duration-500 mt-2">
                                 Shop Now</div>
@@ -27,7 +27,7 @@ const BannerBelow = () => {
                         </div>
                         <div className="banner-content relative">
                             <div className="heading5 text-white">Deals Good <br />Iphone 15 pro</div>
-                            <div className="text-title text-white mt-2">Save $599.00</div>
+                            <div className="text-title text-white mt-2">Save ₹599.00</div>
                             <div
                                 className="text-button text-white relative inline-block pb-1 border-b-2 border-white duration-500 mt-2">
                                 Shop Now</div>

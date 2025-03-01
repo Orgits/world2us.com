@@ -15,7 +15,7 @@ const ModalCompare = () => {
         <>
             <div className={`modal-compare-block`}>
                 <div
-                    className={`modal-compare-main py-6 ${isModalOpen ? 'open' : ''}`}
+                    className={`modal-compare-main py-6 ₹{isModalOpen ? 'open' : ''}`}
                     onClick={(e) => { e.stopPropagation() }}
                 >
                     <div
@@ -42,7 +42,7 @@ const ModalCompare = () => {
                                             </div>
                                             <div className=''>
                                                 <div className="name text-title">{product.name}</div>
-                                                <div className="product-price text-title mt-2">${product.price}.00</div>
+                                                <div className="product-price text-title mt-2">₹{product.price}.00</div>
                                             </div>
                                         </div>
                                         <div className="close-btn absolute -right-4 -top-4 w-8 h-8 rounded-full bg-red text-white flex items-center justify-center duration-300 cursor-pointer hover:bg-black" onClick={() => removeFromCompare(product.id)}>

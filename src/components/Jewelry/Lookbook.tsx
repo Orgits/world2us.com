@@ -10,7 +10,7 @@ const Lookbook = () => {
 
     const handleDetailProduct = (productId: string) => {
         // redirect to shop with category selected
-        router.push(`/product/default?id=${productId}`);
+        router.push(`/product/default?id=₹{productId}`);
     };
 
     return (
@@ -37,7 +37,7 @@ const Lookbook = () => {
                                     </div>
                                     <div className="product-infor bg-white rounded-2xl p-4 cursor-pointer" onClick={()=> handleDetailProduct('69')}>
                                         <div className="text-title name">silver necklace</div>
-                                        <div className="price text-center">$60.00</div>
+                                        <div className="price text-center">₹60.00</div>
                                         <div
                                             className="text-center underline mt-1 text-button-uppercase duration-300 text-secondary2 hover:text-black">
                                             View
@@ -50,7 +50,7 @@ const Lookbook = () => {
                                     </div>
                                     <div className="product-infor bg-white rounded-2xl p-4 cursor-pointer" onClick={()=> handleDetailProduct('66')}>
                                         <div className="text-title name">golden ring</div>
-                                        <div className="price text-center">$50.00</div>
+                                        <div className="price text-center">₹50.00</div>
                                         <div
                                             className="text-center underline mt-1 text-button-uppercase duration-300 text-secondary2 hover:text-black">
                                             View
@@ -63,7 +63,7 @@ const Lookbook = () => {
                                     </div>
                                     <div className="product-infor bg-white rounded-2xl p-4 cursor-pointer" onClick={()=> handleDetailProduct('66')}>
                                         <div className="text-title name">Ruby Ring</div>
-                                        <div className="price text-center">$40.00</div>
+                                        <div className="price text-center">₹40.00</div>
                                         <div
                                             className="text-center underline mt-1 text-button-uppercase duration-300 text-secondary2 hover:text-black">
                                             View
@@ -85,7 +85,7 @@ const Lookbook = () => {
                                     </div>
                                     <div className="product-infor bg-white rounded-2xl p-4 cursor-pointer" onClick={()=> handleDetailProduct('66')}>
                                         <div className="text-title name">Snake Ring</div>
-                                        <div className="price text-center">$45.00</div>
+                                        <div className="price text-center">₹45.00</div>
                                         <div
                                             className="text-center underline mt-1 text-button-uppercase duration-300 text-secondary2 hover:text-black">
                                             View
@@ -98,7 +98,7 @@ const Lookbook = () => {
                                     </div>
                                     <div className="product-infor bg-white rounded-2xl p-4 cursor-pointer" onClick={()=> handleDetailProduct('66')}>
                                         <div className="text-title name">Golden Ring</div>
-                                        <div className="price text-center">$48.00</div>
+                                        <div className="price text-center">₹48.00</div>
                                         <div
                                             className="text-center underline mt-1 text-button-uppercase duration-300 text-secondary2 hover:text-black">
                                             View

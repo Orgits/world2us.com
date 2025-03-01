@@ -52,7 +52,7 @@ const ModalSizeguide: React.FC<Props> = ({ data, isOpen, onClose }) => {
         <>
             <div className={`modal-sizeguide-block`} onClick={onClose}>
                 <div
-                    className={`modal-sizeguide-main md:p-10 p-6 rounded-[32px] ${isOpen ? 'open' : ''}`}
+                    className={`modal-sizeguide-main md:p-10 p-6 rounded-[32px] ₹{isOpen ? 'open' : ''}`}
                     onClick={(e) => { e.stopPropagation() }}
                 >
                     <div
@@ -100,7 +100,7 @@ const ModalSizeguide: React.FC<Props> = ({ data, isOpen, onClose }) => {
                     <div className="list-size flex items-center gap-2 flex-wrap mt-3">
                         {data?.sizes.map((item, index) => (
                             <div
-                                className={`size-item w-12 h-12 flex items-center justify-center text-button rounded-full bg-white border border-line ${activeSize === item ? 'active' : ''}`}
+                                className={`size-item w-12 h-12 flex items-center justify-center text-button rounded-full bg-white border border-line ₹{activeSize === item ? 'active' : ''}`}
                                 key={index}
                             >
                                 {item}

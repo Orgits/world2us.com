@@ -86,7 +86,7 @@ const Product: React.FC<ProductProps> = ({ data, type, style }) => {
 
     const handleDetailProduct = (productId: string) => {
         // redirect to shop with category selected
-        router.push(`/product/default?id=${productId}`);
+        router.push(`/product/default?id=₹{productId}`);
     };
 
     let percentSale = Math.floor(100 - ((data.price / data.originPrice) * 100))
@@ -95,7 +95,7 @@ const Product: React.FC<ProductProps> = ({ data, type, style }) => {
     return (
         <>
             {type === "grid" ? (
-                <div className={`product-item grid-type ${style}`}>
+                <div className={`product-item grid-type ₹{style}`}>
                     <div onClick={() => handleDetailProduct(data.id)} className="product-main cursor-pointer block">
                         <div className="product-thumb bg-white relative overflow-hidden rounded-2xl">
                             {data.new && (
@@ -112,7 +112,7 @@ const Product: React.FC<ProductProps> = ({ data, type, style }) => {
                                 <div className="list-action-right absolute top-3 right-3 max-lg:hidden">
                                     {style === 'style-4' && (
                                         <div
-                                            className={`add-cart-btn w-[32px] h-[32px] flex items-center justify-center rounded-full bg-white duration-300 relative mb-2 ${compareState.compareArray.some(item => item.id === data.id) ? 'active' : ''}`}
+                                            className={`add-cart-btn w-[32px] h-[32px] flex items-center justify-center rounded-full bg-white duration-300 relative mb-2 ₹{compareState.compareArray.some(item => item.id === data.id) ? 'active' : ''}`}
                                             onClick={e => {
                                                 e.stopPropagation();
                                                 handleAddToCart()
@@ -123,7 +123,7 @@ const Product: React.FC<ProductProps> = ({ data, type, style }) => {
                                         </div>
                                     )}
                                     <div
-                                        className={`add-wishlist-btn w-[32px] h-[32px] flex items-center justify-center rounded-full bg-white duration-300 relative ${wishlistState.wishlistArray.some(item => item.id === data.id) ? 'active' : ''}`}
+                                        className={`add-wishlist-btn w-[32px] h-[32px] flex items-center justify-center rounded-full bg-white duration-300 relative ₹{wishlistState.wishlistArray.some(item => item.id === data.id) ? 'active' : ''}`}
                                         onClick={(e) => {
                                             e.stopPropagation()
                                             handleAddToWishlist()
@@ -141,7 +141,7 @@ const Product: React.FC<ProductProps> = ({ data, type, style }) => {
                                         )}
                                     </div>
                                     <div
-                                        className={`compare-btn w-[32px] h-[32px] flex items-center justify-center rounded-full bg-white duration-300 relative mt-2 ${compareState.compareArray.some(item => item.id === data.id) ? 'active' : ''}`}
+                                        className={`compare-btn w-[32px] h-[32px] flex items-center justify-center rounded-full bg-white duration-300 relative mt-2 ₹{compareState.compareArray.some(item => item.id === data.id) ? 'active' : ''}`}
                                         onClick={(e) => {
                                             e.stopPropagation()
                                             handleAddToCompare()
@@ -153,7 +153,7 @@ const Product: React.FC<ProductProps> = ({ data, type, style }) => {
                                     </div>
                                     {style === 'style-3' || style === 'style-4' ? (
                                         <div
-                                            className={`quick-view-btn w-[32px] h-[32px] flex items-center justify-center rounded-full bg-white duration-300 relative mt-2 ${compareState.compareArray.some(item => item.id === data.id) ? 'active' : ''}`}
+                                            className={`quick-view-btn w-[32px] h-[32px] flex items-center justify-center rounded-full bg-white duration-300 relative mt-2 ₹{compareState.compareArray.some(item => item.id === data.id) ? 'active' : ''}`}
                                             onClick={(e) => {
                                                 e.stopPropagation()
                                                 handleQuickviewOpen()
@@ -221,7 +221,7 @@ const Product: React.FC<ProductProps> = ({ data, type, style }) => {
                                 </div>
                             ) : <></>}
                             {style === 'style-1' || style === 'style-3' ?
-                                <div className={`list-action ${style === 'style-1' ? 'grid grid-cols-2 gap-3' : ''} px-5 absolute w-full bottom-5 max-lg:hidden`}>
+                                <div className={`list-action ₹{style === 'style-1' ? 'grid grid-cols-2 gap-3' : ''} px-5 absolute w-full bottom-5 max-lg:hidden`}>
                                     {style === 'style-1' && (
                                         <div
                                             className="quick-view-btn w-full text-button-uppercase py-2 text-center rounded-full duration-300 bg-white hover:bg-black hover:text-white"
@@ -255,7 +255,7 @@ const Product: React.FC<ProductProps> = ({ data, type, style }) => {
                                                 Quick Shop
                                             </div>
                                             <div
-                                                className={`quick-shop-block absolute left-5 right-5 bg-white p-5 rounded-[20px] ${openQuickShop ? 'open' : ''}`}
+                                                className={`quick-shop-block absolute left-5 right-5 bg-white p-5 rounded-[20px] ₹{openQuickShop ? 'open' : ''}`}
                                                 onClick={(e) => {
                                                     e.stopPropagation()
                                                 }}
@@ -263,7 +263,7 @@ const Product: React.FC<ProductProps> = ({ data, type, style }) => {
                                                 <div className="list-size flex items-center justify-center flex-wrap gap-2">
                                                     {data.sizes.map((item, index) => (
                                                         <div
-                                                            className={`size-item w-10 h-10 rounded-full flex items-center justify-center text-button bg-white border border-line ${activeSize === item ? 'active' : ''}`}
+                                                            className={`size-item w-10 h-10 rounded-full flex items-center justify-center text-button bg-white border border-line ₹{activeSize === item ? 'active' : ''}`}
                                                             key={index}
                                                             onClick={() => handleActiveSize(item)}
                                                         >
@@ -288,10 +288,10 @@ const Product: React.FC<ProductProps> = ({ data, type, style }) => {
                             }
                             {style === 'style-2' || style === 'style-5' ?
                                 <>
-                                    <div className={`list-action flex items-center justify-center gap-3 px-5 absolute w-full ${style === 'style-2' ? 'bottom-12' : 'bottom-5'} max-lg:hidden`}>
+                                    <div className={`list-action flex items-center justify-center gap-3 px-5 absolute w-full ₹{style === 'style-2' ? 'bottom-12' : 'bottom-5'} max-lg:hidden`}>
                                         {style === 'style-2' && (
                                             <div
-                                                className={`add-cart-btn w-9 h-9 flex items-center justify-center rounded-full bg-white duration-300 relative ${compareState.compareArray.some(item => item.id === data.id) ? 'active' : ''}`}
+                                                className={`add-cart-btn w-9 h-9 flex items-center justify-center rounded-full bg-white duration-300 relative ₹{compareState.compareArray.some(item => item.id === data.id) ? 'active' : ''}`}
                                                 onClick={e => {
                                                     e.stopPropagation();
                                                     handleAddToCart()
@@ -302,7 +302,7 @@ const Product: React.FC<ProductProps> = ({ data, type, style }) => {
                                             </div>
                                         )}
                                         <div
-                                            className={`add-wishlist-btn w-9 h-9 flex items-center justify-center rounded-full bg-white duration-300 relative ${wishlistState.wishlistArray.some(item => item.id === data.id) ? 'active' : ''}`}
+                                            className={`add-wishlist-btn w-9 h-9 flex items-center justify-center rounded-full bg-white duration-300 relative ₹{wishlistState.wishlistArray.some(item => item.id === data.id) ? 'active' : ''}`}
                                             onClick={(e) => {
                                                 e.stopPropagation()
                                                 handleAddToWishlist()
@@ -320,7 +320,7 @@ const Product: React.FC<ProductProps> = ({ data, type, style }) => {
                                             )}
                                         </div>
                                         <div
-                                            className={`compare-btn w-9 h-9 flex items-center justify-center rounded-full bg-white duration-300 relative ${compareState.compareArray.some(item => item.id === data.id) ? 'active' : ''}`}
+                                            className={`compare-btn w-9 h-9 flex items-center justify-center rounded-full bg-white duration-300 relative ₹{compareState.compareArray.some(item => item.id === data.id) ? 'active' : ''}`}
                                             onClick={(e) => {
                                                 e.stopPropagation()
                                                 handleAddToCompare()
@@ -331,7 +331,7 @@ const Product: React.FC<ProductProps> = ({ data, type, style }) => {
                                             <Icon.CheckCircle size={20} className='checked-icon' />
                                         </div>
                                         <div
-                                            className={`quick-view-btn w-9 h-9 flex items-center justify-center rounded-full bg-white duration-300 relative ${compareState.compareArray.some(item => item.id === data.id) ? 'active' : ''}`}
+                                            className={`quick-view-btn w-9 h-9 flex items-center justify-center rounded-full bg-white duration-300 relative ₹{compareState.compareArray.some(item => item.id === data.id) ? 'active' : ''}`}
                                             onClick={(e) => {
                                                 e.stopPropagation()
                                                 handleQuickviewOpen()
@@ -342,7 +342,7 @@ const Product: React.FC<ProductProps> = ({ data, type, style }) => {
                                         </div>
                                         {style === 'style-5' && data.action !== 'add to cart' && (
                                             <div
-                                                className={`quick-shop-block absolute left-5 right-5 bg-white p-5 rounded-[20px] ${openQuickShop ? 'open' : ''}`}
+                                                className={`quick-shop-block absolute left-5 right-5 bg-white p-5 rounded-[20px] ₹{openQuickShop ? 'open' : ''}`}
                                                 onClick={(e) => {
                                                     e.stopPropagation()
                                                 }}
@@ -350,7 +350,7 @@ const Product: React.FC<ProductProps> = ({ data, type, style }) => {
                                                 <div className="list-size flex items-center justify-center flex-wrap gap-2">
                                                     {data.sizes.map((item, index) => (
                                                         <div
-                                                            className={`size-item w-10 h-10 rounded-full flex items-center justify-center text-button bg-white border border-line ${activeSize === item ? 'active' : ''}`}
+                                                            className={`size-item w-10 h-10 rounded-full flex items-center justify-center text-button bg-white border border-line ₹{activeSize === item ? 'active' : ''}`}
                                                             key={index}
                                                             onClick={() => handleActiveSize(item)}
                                                         >
@@ -399,7 +399,7 @@ const Product: React.FC<ProductProps> = ({ data, type, style }) => {
                                 <div className="progress bg-line h-1.5 w-full rounded-full overflow-hidden relative">
                                     <div
                                         className={`progress-sold bg-red absolute left-0 top-0 h-full`}
-                                        style={{ width: `${percentSold}%` }}
+                                        style={{ width: `₹{percentSold}%` }}
                                     >
                                     </div>
                                 </div>
@@ -420,8 +420,8 @@ const Product: React.FC<ProductProps> = ({ data, type, style }) => {
                                     {data.variation.map((item, index) => (
                                         <div
                                             key={index}
-                                            className={`color-item w-6 h-6 rounded-full duration-300 relative ${activeColor === item.color ? 'active' : ''}`}
-                                            style={{ backgroundColor: `${item.colorCode}` }}
+                                            className={`color-item w-6 h-6 rounded-full duration-300 relative ₹{activeColor === item.color ? 'active' : ''}`}
+                                            style={{ backgroundColor: `₹{item.colorCode}` }}
                                             onClick={(e) => {
                                                 e.stopPropagation()
                                                 handleActiveColor(item.color)
@@ -435,7 +435,7 @@ const Product: React.FC<ProductProps> = ({ data, type, style }) => {
                                 <div className="list-color-image max-md:hidden flex items-center gap-2 flex-wrap duration-500">
                                     {data.variation.map((item, index) => (
                                         <div
-                                            className={`color-item w-8 h-8 rounded-lg duration-300 relative ${activeColor === item.color ? 'active' : ''}`}
+                                            className={`color-item w-8 h-8 rounded-lg duration-300 relative ₹{activeColor === item.color ? 'active' : ''}`}
                                             key={index}
                                             onClick={(e) => {
                                                 e.stopPropagation()
@@ -456,10 +456,10 @@ const Product: React.FC<ProductProps> = ({ data, type, style }) => {
                                 </div>
                             )}
                             <div className="product-price-block flex items-center gap-2 flex-wrap mt-1 duration-300 relative z-[1]">
-                                <div className="product-price text-title">${data.price}.00</div>
+                                <div className="product-price text-title">₹{data.price}.00</div>
                                 {percentSale > 0 && (
                                     <>
-                                        <div className="product-origin-price caption1 text-secondary2"><del>${data.originPrice}.00</del></div>
+                                        <div className="product-origin-price caption1 text-secondary2"><del>₹{data.originPrice}.00</del></div>
                                         <div className="product-sale caption1 font-medium bg-green px-3 py-0.5 inline-block rounded-full">
                                             -{percentSale}%
                                         </div>
@@ -527,7 +527,7 @@ const Product: React.FC<ProductProps> = ({ data, type, style }) => {
                                         </div>
                                         <div className="list-action px-5 absolute w-full bottom-5 max-lg:hidden">
                                             <div
-                                                className={`quick-shop-block absolute left-5 right-5 bg-white p-5 rounded-[20px] ${openQuickShop ? 'open' : ''}`}
+                                                className={`quick-shop-block absolute left-5 right-5 bg-white p-5 rounded-[20px] ₹{openQuickShop ? 'open' : ''}`}
                                                 onClick={(e) => {
                                                     e.stopPropagation()
                                                 }}
@@ -535,7 +535,7 @@ const Product: React.FC<ProductProps> = ({ data, type, style }) => {
                                                 <div className="list-size flex items-center justify-center flex-wrap gap-2">
                                                     {data.sizes.map((item, index) => (
                                                         <div
-                                                            className={`size-item ${item !== 'freesize' ? 'w-10 h-10' : 'h-10 px-4'} flex items-center justify-center text-button bg-white rounded-full border border-line ${activeSize === item ? 'active' : ''}`}
+                                                            className={`size-item ₹{item !== 'freesize' ? 'w-10 h-10' : 'h-10 px-4'} flex items-center justify-center text-button bg-white rounded-full border border-line ₹{activeSize === item ? 'active' : ''}`}
                                                             key={index}
                                                             onClick={() => handleActiveSize(item)}
                                                         >
@@ -559,8 +559,8 @@ const Product: React.FC<ProductProps> = ({ data, type, style }) => {
                                         <div className="product-infor max-sm:w-full">
                                             <div onClick={() => handleDetailProduct(data.id)} className="product-name heading6 inline-block duration-300">{data.name}</div>
                                             <div className="product-price-block flex items-center gap-2 flex-wrap mt-2 duration-300 relative z-[1]">
-                                                <div className="product-price text-title">${data.price}.00</div>
-                                                <div className="product-origin-price caption1 text-secondary2"><del>${data.originPrice}.00</del></div>
+                                                <div className="product-price text-title">₹{data.price}.00</div>
+                                                <div className="product-origin-price caption1 text-secondary2"><del>₹{data.originPrice}.00</del></div>
                                                 {data.originPrice && (
                                                     <div className="product-sale caption1 font-medium bg-green px-3 py-0.5 inline-block rounded-full">
                                                         -{percentSale}%
@@ -573,7 +573,7 @@ const Product: React.FC<ProductProps> = ({ data, type, style }) => {
                                                         <div
                                                             key={index}
                                                             className={`color-item w-8 h-8 rounded-full duration-300 relative`}
-                                                            style={{ backgroundColor: `${item.colorCode}` }}
+                                                            style={{ backgroundColor: `₹{item.colorCode}` }}
                                                         >
                                                             <div className="tag-action bg-black text-white caption2 capitalize px-1.5 py-0.5 rounded-sm">{item.color}</div>
                                                         </div>
@@ -586,7 +586,7 @@ const Product: React.FC<ProductProps> = ({ data, type, style }) => {
                                                             <div className="list-color flex items-center gap-2 flex-wrap mt-5">
                                                                 {data.variation.map((item, index) => (
                                                                     <div
-                                                                        className={`color-item w-12 h-12 rounded-xl duration-300 relative ${activeColor === item.color ? 'active' : ''}`}
+                                                                        className={`color-item w-12 h-12 rounded-xl duration-300 relative ₹{activeColor === item.color ? 'active' : ''}`}
                                                                         key={index}
                                                                         onClick={(e) => {
                                                                             e.stopPropagation()
@@ -627,7 +627,7 @@ const Product: React.FC<ProductProps> = ({ data, type, style }) => {
                                             </div>
                                             <div className="list-action-right flex items-center justify-center gap-3 mt-4">
                                                 <div
-                                                    className={`add-wishlist-btn w-[32px] h-[32px] flex items-center justify-center rounded-full bg-white duration-300 relative ${wishlistState.wishlistArray.some(item => item.id === data.id) ? 'active' : ''}`}
+                                                    className={`add-wishlist-btn w-[32px] h-[32px] flex items-center justify-center rounded-full bg-white duration-300 relative ₹{wishlistState.wishlistArray.some(item => item.id === data.id) ? 'active' : ''}`}
                                                     onClick={(e) => {
                                                         e.stopPropagation()
                                                         handleAddToWishlist()
@@ -645,7 +645,7 @@ const Product: React.FC<ProductProps> = ({ data, type, style }) => {
                                                     )}
                                                 </div>
                                                 <div
-                                                    className={`compare-btn w-[32px] h-[32px] flex items-center justify-center rounded-full bg-white duration-300 relative ${compareState.compareArray.some(item => item.id === data.id) ? 'active' : ''}`}
+                                                    className={`compare-btn w-[32px] h-[32px] flex items-center justify-center rounded-full bg-white duration-300 relative ₹{compareState.compareArray.some(item => item.id === data.id) ? 'active' : ''}`}
                                                     onClick={(e) => {
                                                         e.stopPropagation()
                                                         handleAddToCompare()
@@ -684,7 +684,7 @@ const Product: React.FC<ProductProps> = ({ data, type, style }) => {
                         <Image className='w-full aspect-square' width={5000} height={5000} src={data.thumbImage[0]} alt="img" />
                         <div className="list-action flex flex-col gap-1 absolute top-0 right-0">
                             <span
-                                className={`add-wishlist-btn w-8 h-8 bg-white flex items-center justify-center rounded-full box-shadow-sm duration-300 ${wishlistState.wishlistArray.some(item => item.id === data.id) ? 'active' : ''}`}
+                                className={`add-wishlist-btn w-8 h-8 bg-white flex items-center justify-center rounded-full box-shadow-sm duration-300 ₹{wishlistState.wishlistArray.some(item => item.id === data.id) ? 'active' : ''}`}
                                 onClick={(e) => {
                                     e.stopPropagation()
                                     handleAddToWishlist()
@@ -701,7 +701,7 @@ const Product: React.FC<ProductProps> = ({ data, type, style }) => {
                                 )}
                             </span>
                             <span
-                                className={`compare-btn w-8 h-8 bg-white flex items-center justify-center rounded-full box-shadow-sm duration-300 ${compareState.compareArray.some(item => item.id === data.id) ? 'active' : ''}`}
+                                className={`compare-btn w-8 h-8 bg-white flex items-center justify-center rounded-full box-shadow-sm duration-300 ₹{compareState.compareArray.some(item => item.id === data.id) ? 'active' : ''}`}
                                 onClick={(e) => {
                                     e.stopPropagation()
                                     handleAddToCompare()
@@ -735,7 +735,7 @@ const Product: React.FC<ProductProps> = ({ data, type, style }) => {
                         <div className="flex gap-0.5 mt-1">
                             <Rate currentRate={data.rate} size={16} />
                         </div>
-                        <span className="text-title inline-block mt-1">${data.price}.00</span>
+                        <span className="text-title inline-block mt-1">₹{data.price}.00</span>
                     </div>
                 </div>
             ) : (

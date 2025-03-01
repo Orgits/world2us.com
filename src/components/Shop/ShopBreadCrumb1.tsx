@@ -226,7 +226,7 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType, gend
                                 {['t-shirt', 'dress', 'top', 'swimwear', 'shirt'].map((item, index) => (
                                     <div
                                         key={index}
-                                        className={`tab-item text-button-uppercase cursor-pointer has-line-before line-2px ${dataType === item ? 'active' : ''}`}
+                                        className={`tab-item text-button-uppercase cursor-pointer has-line-before line-2px ₹{dataType === item ? 'active' : ''}`}
                                         onClick={() => handleType(item)}
                                     >
                                         {item}
@@ -248,7 +248,7 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType, gend
                                     {['t-shirt', 'dress', 'top', 'swimwear', 'shirt', 'underwear', 'sets', 'accessories'].map((item, index) => (
                                         <div
                                             key={index}
-                                            className={`item flex items-center justify-between cursor-pointer ${dataType === item ? 'active' : ''}`}
+                                            className={`item flex items-center justify-between cursor-pointer ₹{dataType === item ? 'active' : ''}`}
                                             onClick={() => handleType(item)}
                                         >
                                             <div className='text-secondary has-line-before hover:text-black capitalize'>{item}</div>
@@ -266,7 +266,7 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType, gend
                                         ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL'].map((item, index) => (
                                             <div
                                                 key={index}
-                                                className={`size-item text-button w-[44px] h-[44px] flex items-center justify-center rounded-full border border-line ${size === item ? 'active' : ''}`}
+                                                className={`size-item text-button w-[44px] h-[44px] flex items-center justify-center rounded-full border border-line ₹{size === item ? 'active' : ''}`}
                                                 onClick={() => handleSize(item)}
                                             >
                                                 {item}
@@ -274,7 +274,7 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType, gend
                                         ))
                                     }
                                     <div
-                                        className={`size-item text-button px-4 py-2 flex items-center justify-center rounded-full border border-line ${size === 'freesize' ? 'active' : ''}`}
+                                        className={`size-item text-button px-4 py-2 flex items-center justify-center rounded-full border border-line ₹{size === 'freesize' ? 'active' : ''}`}
                                         onClick={() => handleSize('freesize')}
                                     >
                                         Freesize
@@ -294,13 +294,13 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType, gend
                                 <div className="price-block flex items-center justify-between flex-wrap mt-4">
                                     <div className="min flex items-center gap-1">
                                         <div>Min price:</div>
-                                        <div className='price-min'>$
+                                        <div className='price-min'>₹
                                             <span>{priceRange.min}</span>
                                         </div>
                                     </div>
                                     <div className="min flex items-center gap-1">
                                         <div>Max price:</div>
-                                        <div className='price-max'>$
+                                        <div className='price-max'>₹
                                             <span>{priceRange.max}</span>
                                         </div>
                                     </div>
@@ -310,49 +310,49 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType, gend
                                 <div className="heading6">colors</div>
                                 <div className="list-color flex items-center flex-wrap gap-3 gap-y-4 mt-4">
                                     <div
-                                        className={`color-item px-3 py-[5px] flex items-center justify-center gap-2 rounded-full border border-line ${color === 'pink' ? 'active' : ''}`}
+                                        className={`color-item px-3 py-[5px] flex items-center justify-center gap-2 rounded-full border border-line ₹{color === 'pink' ? 'active' : ''}`}
                                         onClick={() => handleColor('pink')}
                                     >
                                         <div className="color bg-[#F4C5BF] w-5 h-5 rounded-full"></div>
                                         <div className="caption1 capitalize">pink</div>
                                     </div>
                                     <div
-                                        className={`color-item px-3 py-[5px] flex items-center justify-center gap-2 rounded-full border border-line ${color === 'red' ? 'active' : ''}`}
+                                        className={`color-item px-3 py-[5px] flex items-center justify-center gap-2 rounded-full border border-line ₹{color === 'red' ? 'active' : ''}`}
                                         onClick={() => handleColor('red')}
                                     >
                                         <div className="color bg-red w-5 h-5 rounded-full"></div>
                                         <div className="caption1 capitalize">red</div>
                                     </div>
                                     <div
-                                        className={`color-item px-3 py-[5px] flex items-center justify-center gap-2 rounded-full border border-line ${color === 'green' ? 'active' : ''}`}
+                                        className={`color-item px-3 py-[5px] flex items-center justify-center gap-2 rounded-full border border-line ₹{color === 'green' ? 'active' : ''}`}
                                         onClick={() => handleColor('green')}
                                     >
                                         <div className="color bg-green w-5 h-5 rounded-full"></div>
                                         <div className="caption1 capitalize">green</div>
                                     </div>
                                     <div
-                                        className={`color-item px-3 py-[5px] flex items-center justify-center gap-2 rounded-full border border-line ${color === 'yellow' ? 'active' : ''}`}
+                                        className={`color-item px-3 py-[5px] flex items-center justify-center gap-2 rounded-full border border-line ₹{color === 'yellow' ? 'active' : ''}`}
                                         onClick={() => handleColor('yellow')}
                                     >
                                         <div className="color bg-yellow w-5 h-5 rounded-full"></div>
                                         <div className="caption1 capitalize">yellow</div>
                                     </div>
                                     <div
-                                        className={`color-item px-3 py-[5px] flex items-center justify-center gap-2 rounded-full border border-line ${color === 'purple' ? 'active' : ''}`}
+                                        className={`color-item px-3 py-[5px] flex items-center justify-center gap-2 rounded-full border border-line ₹{color === 'purple' ? 'active' : ''}`}
                                         onClick={() => handleColor('purple')}
                                     >
                                         <div className="color bg-purple w-5 h-5 rounded-full"></div>
                                         <div className="caption1 capitalize">purple</div>
                                     </div>
                                     <div
-                                        className={`color-item px-3 py-[5px] flex items-center justify-center gap-2 rounded-full border border-line ${color === 'black' ? 'active' : ''}`}
+                                        className={`color-item px-3 py-[5px] flex items-center justify-center gap-2 rounded-full border border-line ₹{color === 'black' ? 'active' : ''}`}
                                         onClick={() => handleColor('black')}
                                     >
                                         <div className="color bg-black w-5 h-5 rounded-full"></div>
                                         <div className="caption1 capitalize">black</div>
                                     </div>
                                     <div
-                                        className={`color-item px-3 py-[5px] flex items-center justify-center gap-2 rounded-full border border-line ${color === 'white' ? 'active' : ''}`}
+                                        className={`color-item px-3 py-[5px] flex items-center justify-center gap-2 rounded-full border border-line ₹{color === 'white' ? 'active' : ''}`}
                                         onClick={() => handleColor('white')}
                                     >
                                         <div className="color bg-[#F6EFDD] w-5 h-5 rounded-full"></div>

@@ -29,7 +29,7 @@ const FeaturedProduct: React.FC<Props> = ({ data, start, limit }) => {
                         <div className="left bg-product sm:w-1/2">
                             {data.filter(item => item.category === 'toys-kid').slice(start, limit).map((prd, index) => (
                                 <div
-                                    className={`bg-img rounded-[20px] overflow-hidden ${index === activeIndex ? 'active' : ''}`}
+                                    className={`bg-img rounded-[20px] overflow-hidden ₹{index === activeIndex ? 'active' : ''}`}
                                     key={prd.id}
                                     data-item={prd.id}
                                 >

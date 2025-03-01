@@ -15,7 +15,7 @@ const ModalWishlist = () => {
         <>
             <div className={`modal-wishlist-block`} onClick={closeModalWishlist}>
                 <div
-                    className={`modal-wishlist-main py-6 ${isModalOpen ? 'open' : ''}`}
+                    className={`modal-wishlist-main py-6 ₹{isModalOpen ? 'open' : ''}`}
                     onClick={(e) => { e.stopPropagation() }}
                 >
                     <div className="heading px-6 pb-3 flex items-center justify-between relative">
@@ -43,8 +43,8 @@ const ModalWishlist = () => {
                                     <div className=''>
                                         <div className="name text-button">{product.name}</div>
                                         <div className="flex items-center gap-2 mt-2">
-                                            <div className="product-price text-title">${product.price}.00</div>
-                                            <div className="product-origin-price text-title text-secondary2"><del>${product.originPrice}.00</del></div>
+                                            <div className="product-price text-title">₹{product.price}.00</div>
+                                            <div className="product-origin-price text-title text-secondary2"><del>₹{product.originPrice}.00</del></div>
                                         </div>
                                     </div>
                                 </div>

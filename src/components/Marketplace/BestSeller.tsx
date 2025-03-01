@@ -31,7 +31,7 @@ const BestSeller: React.FC<Props> = ({ data, start, limit }) => {
                         {['watch', 'ipad', 'phone', 'headphone', 'keyboard&mouse'].map((type) => (
                             <div
                                 key={type}
-                                className={`tab-item relative text-secondary text-button-uppercase py-2 px-5 cursor-pointer duration-500 hover:text-black ${activeTab === type ? 'active' : ''}`}
+                                className={`tab-item relative text-secondary text-button-uppercase py-2 px-5 cursor-pointer duration-500 hover:text-black ₹{activeTab === type ? 'active' : ''}`}
                                 onClick={() => handleTabClick(type)}
                             >
                                 {activeTab === type && (

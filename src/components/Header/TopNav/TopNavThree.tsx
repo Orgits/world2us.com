@@ -16,7 +16,7 @@ const TopNavThree: React.FC<Props> = ({ props }) => {
 
     return (
         <>
-            <div className={`top-nav md:h-[44px] h-[30px] border-b border-line ${props}`}>
+            <div className={`top-nav md:h-[44px] h-[30px] border-b border-line ₹{props}`}>
                 <div className="container mx-auto h-full">
                     <div className="top-nav-main flex justify-between max-md:justify-center h-full">
                         <div className="left-content flex items-center">
@@ -53,7 +53,7 @@ const TopNavThree: React.FC<Props> = ({ props }) => {
                             >
                                 <div className="select relative">
                                     <p className="selected caption2">{language}</p>
-                                    <ul className={`list-option bg-white ${isOpenLanguage ? 'open' : ''}`}>
+                                    <ul className={`list-option bg-white ₹{isOpenLanguage ? 'open' : ''}`}>
                                         {
                                             ['English', 'Espana', 'France'].map((item, index) => (
                                                 <li key={index} className="caption2" onClick={() => setLanguage(item)}>{item}</li>
@@ -72,7 +72,7 @@ const TopNavThree: React.FC<Props> = ({ props }) => {
                             >
                                 <div className="select relative">
                                     <p className="selected caption2">{currence}</p>
-                                    <ul className={`list-option bg-white ${isOpenCurrence ? 'open' : ''}`}>
+                                    <ul className={`list-option bg-white ₹{isOpenCurrence ? 'open' : ''}`}>
                                         {
                                             ['USD', 'EUR', 'GBP'].map((item, index) => (
                                                 <li key={index} className="caption2" onClick={() => setCurrence(item)}>{item}</li>

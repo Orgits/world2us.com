@@ -33,7 +33,7 @@ const TabFeature: React.FC<Props> = ({ data, start, limit }) => {
                                 <div
                                     key={gender}
                                     className={`tab-item relative text-secondary2 heading5 py-2 px-5 cursor-pointer duration-500 hover:text-white 
-                                        ${activeTab === gender ? 'active' : ''}`}
+                                        ₹{activeTab === gender ? 'active' : ''}`}
                                     onClick={() => handleTabClick(gender)}
                                 >
                                     {activeTab === gender && (

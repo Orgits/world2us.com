@@ -49,7 +49,7 @@ const Cart = () => {
             setApplyCode(minValue)
             setDiscountCart(discount)
         } else {
-            alert(`Minimum order must be ${minValue}$`)
+            alert(`Minimum order must be ₹{minValue}₹`)
         }
     }
 
@@ -67,7 +67,7 @@ const Cart = () => {
     }
 
     const redirectToCheckout = () => {
-        router.push(`/checkout?discount=${discountCart}&ship=${shipCart}`)
+        router.push(`/checkout?discount=₹{discountCart}&ship=₹{shipCart}`)
     }
 
     return (
@@ -84,20 +84,20 @@ const Cart = () => {
                             <div className="time bg-green py-3 px-5 flex items-center rounded-lg">
                                 <div className="heding5">🔥</div>
                                 <div className="caption1 pl-2">Your cart will expire in
-                                    <span className="min text-red text-button fw-700"> {timeLeft.minutes}:{timeLeft.seconds < 10 ? `0${timeLeft.seconds}` : timeLeft.seconds}</span>
+                                    <span className="min text-red text-button fw-700"> {timeLeft.minutes}:{timeLeft.seconds < 10 ? `0₹{timeLeft.seconds}` : timeLeft.seconds}</span>
                                     <span> minutes! Please checkout now before your items sell out!</span>
                                 </div>
                             </div>
                             <div className="heading banner mt-5">
                                 <div className="text">Buy
-                                    <span className="text-button"> $<span className="more-price">{moneyForFreeship - totalCart > 0 ? (<>{moneyForFreeship - totalCart}</>) : (0)}</span>.00 </span>
+                                    <span className="text-button"> ₹<span className="more-price">{moneyForFreeship - totalCart > 0 ? (<>{moneyForFreeship - totalCart}</>) : (0)}</span>.00 </span>
                                     <span>more to get </span>
                                     <span className="text-button">freeship</span>
                                 </div>
                                 <div className="tow-bar-block mt-4">
                                     <div
                                         className="progress-line"
-                                        style={{ width: totalCart <= moneyForFreeship ? `${(totalCart / moneyForFreeship) * 100}%` : `100%` }}
+                                        style={{ width: totalCart <= moneyForFreeship ? `₹{(totalCart / moneyForFreeship) * 100}%` : `100%` }}
                                     ></div>
                                 </div>
                             </div>
@@ -143,7 +143,7 @@ const Cart = () => {
                                                         </div>
                                                     </div>
                                                     <div className="w-1/12 price flex items-center justify-center">
-                                                        <div className="text-title text-center">${product.price}.00</div>
+                                                        <div className="text-title text-center">₹{product.price}.00</div>
                                                     </div>
                                                     <div className="w-1/6 flex items-center justify-center">
                                                         <div className="quantity-block bg-surface md:p-3 p-2 flex items-center justify-between rounded-lg border border-line md:w-[100px] flex-shrink-0 w-20">
@@ -153,7 +153,7 @@ const Cart = () => {
                                                                         handleQuantityChange(product.id, product.quantity - 1)
                                                                     }
                                                                 }}
-                                                                className={`text-base max-md:text-sm ${product.quantity === 1 ? 'disabled' : ''}`}
+                                                                className={`text-base max-md:text-sm ₹{product.quantity === 1 ? 'disabled' : ''}`}
                                                             />
                                                             <div className="text-button quantity">{product.quantity}</div>
                                                             <Icon.Plus
@@ -163,7 +163,7 @@ const Cart = () => {
                                                         </div>
                                                     </div>
                                                     <div className="w-1/6 flex total-price items-center justify-center">
-                                                        <div className="text-title text-center">${product.quantity * product.price}.00</div>
+                                                        <div className="text-title text-center">₹{product.quantity * product.price}.00</div>
                                                     </div>
                                                     <div className="w-1/12 flex items-center justify-center">
                                                         <Icon.XCircle
@@ -187,14 +187,14 @@ const Cart = () => {
                                 </form>
                             </div>
                             <div className="list-voucher flex items-center gap-5 flex-wrap sm:mt-7 mt-5">
-                                <div className={`item ${applyCode === 200 ? 'bg-green' : ''} border border-line rounded-lg py-2`}>
+                                <div className={`item ₹{applyCode === 200 ? 'bg-green' : ''} border border-line rounded-lg py-2`}>
                                     <div className="top flex gap-10 justify-between px-3 pb-2 border-b border-dashed border-line">
                                         <div className="left">
                                             <div className="caption1">Discount</div>
                                             <div className="caption1 font-bold">10% OFF</div>
                                         </div>
                                         <div className="right">
-                                            <div className="caption1">For all orders <br />from 200$</div>
+                                            <div className="caption1">For all orders <br />from 200₹</div>
                                         </div>
                                     </div>
                                     <div className="bottom gap-6 items-center flex justify-between px-3 pt-2">
@@ -207,14 +207,14 @@ const Cart = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className={`item ${applyCode === 300 ? 'bg-green' : ''} border border-line rounded-lg py-2`}>
+                                <div className={`item ₹{applyCode === 300 ? 'bg-green' : ''} border border-line rounded-lg py-2`}>
                                     <div className="top flex gap-10 justify-between px-3 pb-2 border-b border-dashed border-line">
                                         <div className="left">
                                             <div className="caption1">Discount</div>
                                             <div className="caption1 font-bold">15% OFF</div>
                                         </div>
                                         <div className="right">
-                                            <div className="caption1">For all orders <br />from 300$</div>
+                                            <div className="caption1">For all orders <br />from 300₹</div>
                                         </div>
                                     </div>
                                     <div className="bottom gap-6 items-center flex justify-between px-3 pt-2">
@@ -227,14 +227,14 @@ const Cart = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className={`item ${applyCode === 400 ? 'bg-green' : ''} border border-line rounded-lg py-2`}>
+                                <div className={`item ₹{applyCode === 400 ? 'bg-green' : ''} border border-line rounded-lg py-2`}>
                                     <div className="top flex gap-10 justify-between px-3 pb-2 border-b border-dashed border-line">
                                         <div className="left">
                                             <div className="caption1">Discount</div>
                                             <div className="caption1 font-bold">20% OFF</div>
                                         </div>
                                         <div className="right">
-                                            <div className="caption1">For all orders <br />from 400$</div>
+                                            <div className="caption1">For all orders <br />from 400₹</div>
                                         </div>
                                     </div>
                                     <div className="bottom gap-6 items-center flex justify-between px-3 pt-2">
@@ -254,11 +254,11 @@ const Cart = () => {
                                 <div className="heading5">Order Summary</div>
                                 <div className="total-block py-5 flex justify-between border-b border-line">
                                     <div className="text-title">Subtotal</div>
-                                    <div className="text-title">$<span className="total-product">{totalCart}</span><span>.00</span></div>
+                                    <div className="text-title">₹<span className="total-product">{totalCart}</span><span>.00</span></div>
                                 </div>
                                 <div className="discount-block py-5 flex justify-between border-b border-line">
                                     <div className="text-title">Discounts</div>
-                                    <div className="text-title"> <span>-$</span><span className="discount">{discountCart}</span><span>.00</span></div>
+                                    <div className="text-title"> <span>-₹</span><span className="discount">{discountCart}</span><span>.00</span></div>
                                 </div>
                                 <div className="ship-block py-5 flex justify-between border-b border-line">
                                     <div className="text-title">Shipping</div>
@@ -308,15 +308,15 @@ const Cart = () => {
                                             </div>
                                         </div>
                                         <div className="right">
-                                            <div className="ship">$0.00</div>
-                                            <div className="local text-on-surface-variant1 mt-1">$30.00</div>
-                                            <div className="flat text-on-surface-variant1 mt-1">$40.00</div>
+                                            <div className="ship">₹0.00</div>
+                                            <div className="local text-on-surface-variant1 mt-1">₹30.00</div>
+                                            <div className="flat text-on-surface-variant1 mt-1">₹40.00</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="total-cart-block pt-4 pb-4 flex justify-between">
                                     <div className="heading5">Total</div>
-                                    <div className="heading5">$
+                                    <div className="heading5">₹
                                         <span className="total-cart heading5">{totalCart - discountCart + shipCart}</span>
                                         <span className='heading5'>.00</span></div>
                                 </div>

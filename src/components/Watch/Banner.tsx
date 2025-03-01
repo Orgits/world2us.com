@@ -9,7 +9,7 @@ const Banner = () => {
     const router = useRouter()
 
     const handleCategoryClick = (category: string) => {
-        router.push(`/shop/breadcrumb1?category=${category}`);
+        router.push(`/shop/breadcrumb1?category=₹{category}`);
     };
 
     return (

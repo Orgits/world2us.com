@@ -52,20 +52,20 @@ const MenuCosmeticThree = () => {
     }, [lastScrollPosition]);
 
     const handleGenderClick = (gender: string) => {
-        router.push(`/shop/breadcrumb1?gender=${gender}`);
+        router.push(`/shop/breadcrumb1?gender=₹{gender}`);
     };
 
     const handleCategoryClick = (category: string) => {
-        router.push(`/shop/breadcrumb1?category=${category}`);
+        router.push(`/shop/breadcrumb1?category=₹{category}`);
     };
 
     const handleTypeClick = (type: string) => {
-        router.push(`/shop/breadcrumb1?type=${type}`);
+        router.push(`/shop/breadcrumb1?type=₹{type}`);
     };
 
     return (
         <>
-            <div className={`header-menu style-one ${fixedHeader ? ' fixed' : 'relative'} bg-white w-full md:h-[74px] h-[56px]`}>
+            <div className={`header-menu style-one ₹{fixedHeader ? ' fixed' : 'relative'} bg-white w-full md:h-[74px] h-[56px]`}>
                 <div className="container mx-auto h-full">
                     <div className="header-main flex justify-between h-full">
                         <div className="menu-mobile-icon lg:hidden flex items-center" onClick={handleMenuMobile}>
@@ -80,7 +80,7 @@ const MenuCosmeticThree = () => {
                                     <Link
                                         href="#!"
                                         className={`text-button-uppercase duration-300 h-full flex items-center justify-center gap-1 
-                                            ${pathname.includes('/homepages/') ? 'active' : ''}`}
+                                            ₹{pathname.includes('/homepages/') ? 'active' : ''}`}
                                     >
                                         Demo
                                     </Link>
@@ -94,7 +94,7 @@ const MenuCosmeticThree = () => {
                                             <li>
                                                 <Link
                                                     href="/homepages/fashion2"
-                                                    className={`text-secondary duration-300 ${pathname === '/homepages/fashion2' ? 'active' : ''}`}
+                                                    className={`text-secondary duration-300 ₹{pathname === '/homepages/fashion2' ? 'active' : ''}`}
                                                 >
                                                     Home Fashion 2
                                                 </Link>
@@ -102,7 +102,7 @@ const MenuCosmeticThree = () => {
                                             <li>
                                                 <Link
                                                     href="/homepages/fashion3"
-                                                    className={`text-secondary duration-300 ${pathname === '/homepages/fashion3' ? 'active' : ''}`}
+                                                    className={`text-secondary duration-300 ₹{pathname === '/homepages/fashion3' ? 'active' : ''}`}
                                                 >
                                                     Home Fashion 3
                                                 </Link>
@@ -127,7 +127,7 @@ const MenuCosmeticThree = () => {
                                             <li>
                                                 <Link
                                                     href="/homepages/fashion7"
-                                                    className={`text-secondary duration-300 ${pathname === '/homepages/fashion7' ? 'active' : ''}`}
+                                                    className={`text-secondary duration-300 ₹{pathname === '/homepages/fashion7' ? 'active' : ''}`}
                                                 >
                                                     Home Fashion 7
                                                 </Link>
@@ -170,7 +170,7 @@ const MenuCosmeticThree = () => {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="/homepages/cosmetic3" className={`text-secondary duration-300 ${pathname === '/homepages/cosmetic3' ? 'active' : ''}`}>
+                                                <Link href="/homepages/cosmetic3" className={`text-secondary duration-300 ₹{pathname === '/homepages/cosmetic3' ? 'active' : ''}`}>
                                                     Home Cosmetic 3
                                                 </Link>
                                             </li>
@@ -204,7 +204,7 @@ const MenuCosmeticThree = () => {
                                             <li>
                                                 <Link
                                                     href="/homepages/yoga"
-                                                    className={`text-secondary duration-300 ${pathname === '/homepages/yoga' ? 'active' : ''}`}>
+                                                    className={`text-secondary duration-300 ₹{pathname === '/homepages/yoga' ? 'active' : ''}`}>
                                                     Home Yoga
                                                 </Link>
                                             </li>
@@ -413,10 +413,10 @@ const MenuCosmeticThree = () => {
                                                 <div className="banner-ads-block pl-2.5 basis-1/3">
                                                     <div className="banner-ads-item bg-linear rounded-2xl relative overflow-hidden cursor-pointer" onClick={() => handleCategoryClick('cosmetic')}>
                                                         <div className="text-content py-14 pl-8 relative z-[1]">
-                                                            <div className="text-button-uppercase text-white bg-red px-2 py-0.5 inline-block rounded-sm">Save $10</div>
+                                                            <div className="text-button-uppercase text-white bg-red px-2 py-0.5 inline-block rounded-sm">Save ₹10</div>
                                                             <div className="heading6 mt-2">Dive into Savings <br />on Cosmetic</div>
                                                             <div className="body1 mt-3 text-secondary">
-                                                                Starting at <span className='text-red'>$59.99</span>
+                                                                Starting at <span className='text-red'>₹59.99</span>
                                                             </div>
                                                             <div className="button-main mt-5">Shop Now</div>
                                                         </div>
@@ -447,7 +447,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/breadcrumb-img'}
-                                                                    className={`link text-secondary duration-300 ${pathname === '/shop/breadcrumb-img' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ₹{pathname === '/shop/breadcrumb-img' ? 'active' : ''}`}
                                                                 >
                                                                     Shop Breadcrumb IMG
                                                                 </Link>
@@ -455,7 +455,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/breadcrumb1'}
-                                                                    className={`link text-secondary duration-300 ${pathname === '/shop/breadcrumb1' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ₹{pathname === '/shop/breadcrumb1' ? 'active' : ''}`}
                                                                 >
                                                                     Shop Breadcrumb 1
                                                                 </Link>
@@ -463,7 +463,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/breadcrumb2'}
-                                                                    className={`link text-secondary duration-300 ${pathname === '/shop/breadcrumb2' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ₹{pathname === '/shop/breadcrumb2' ? 'active' : ''}`}
                                                                 >
                                                                     Shop Breadcrumb 2
                                                                 </Link>
@@ -471,7 +471,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/collection'}
-                                                                    className={`link text-secondary duration-300 ${pathname === '/shop/collection' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ₹{pathname === '/shop/collection' ? 'active' : ''}`}
                                                                 >
                                                                     Shop Collection
                                                                 </Link>
@@ -484,7 +484,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/filter-canvas'}
-                                                                    className={`link text-secondary duration-300 ${pathname === '/shop/filter-canvas' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ₹{pathname === '/shop/filter-canvas' ? 'active' : ''}`}
                                                                 >
                                                                     Shop Filter Canvas
                                                                 </Link>
@@ -492,7 +492,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/filter-options'}
-                                                                    className={`link text-secondary duration-300 ${pathname === '/shop/filter-options' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ₹{pathname === '/shop/filter-options' ? 'active' : ''}`}
                                                                 >
                                                                     Shop Filter Options
                                                                 </Link>
@@ -500,7 +500,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/filter-dropdown'}
-                                                                    className={`link text-secondary duration-300 ${pathname === '/shop/filter-dropdown' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ₹{pathname === '/shop/filter-dropdown' ? 'active' : ''}`}
                                                                 >
                                                                     Shop Filter Dropdown
                                                                 </Link>
@@ -508,7 +508,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/sidebar-list'}
-                                                                    className={`link text-secondary duration-300 ${pathname === '/shop/sidebar-list' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ₹{pathname === '/shop/sidebar-list' ? 'active' : ''}`}
                                                                 >
                                                                     Shop Sidebar List
                                                                 </Link>
@@ -521,7 +521,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/default'}
-                                                                    className={`link text-secondary duration-300 cursor-pointer ${pathname === '/shop/default' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer ₹{pathname === '/shop/default' ? 'active' : ''}`}
                                                                 >
                                                                     Shop Default
                                                                 </Link>
@@ -529,7 +529,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/default-grid'}
-                                                                    className={`link text-secondary duration-300 cursor-pointer ${pathname === '/shop/default-grid' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer ₹{pathname === '/shop/default-grid' ? 'active' : ''}`}
                                                                 >
                                                                     Shop Default Grid
                                                                 </Link>
@@ -537,7 +537,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/default-list'}
-                                                                    className={`link text-secondary duration-300 cursor-pointer ${pathname === '/shop/default-list' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer ₹{pathname === '/shop/default-list' ? 'active' : ''}`}
                                                                 >
                                                                     Shop Default List
                                                                 </Link>
@@ -545,7 +545,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/fullwidth'}
-                                                                    className={`link text-secondary duration-300 cursor-pointer ${pathname === '/shop/fullwidth' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer ₹{pathname === '/shop/fullwidth' ? 'active' : ''}`}
                                                                 >
                                                                     Shop Full Width
                                                                 </Link>
@@ -553,7 +553,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/square'}
-                                                                    className={`link text-secondary duration-300 ${pathname === '/shop/square' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ₹{pathname === '/shop/square' ? 'active' : ''}`}
                                                                 >
                                                                     Shop Square
                                                                 </Link>
@@ -561,7 +561,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/checkout'}
-                                                                    className={`link text-secondary duration-300 ${pathname === '/checkout' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ₹{pathname === '/checkout' ? 'active' : ''}`}
                                                                 >
                                                                     Checkout
                                                                 </Link>
@@ -569,7 +569,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/checkout2'}
-                                                                    className={`link text-secondary duration-300 ${pathname === '/checkout2' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ₹{pathname === '/checkout2' ? 'active' : ''}`}
                                                                 >
                                                                     Checkout Style 2
                                                                 </Link>
@@ -582,7 +582,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/wishlist'}
-                                                                    className={`link text-secondary duration-300 ${pathname === '/wishlist' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ₹{pathname === '/wishlist' ? 'active' : ''}`}
                                                                 >
                                                                     Wish List
                                                                 </Link>
@@ -590,7 +590,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/search-result'}
-                                                                    className={`link text-secondary duration-300 ${pathname === '/search-result' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ₹{pathname === '/search-result' ? 'active' : ''}`}
                                                                 >
                                                                     Search Result
                                                                 </Link>
@@ -598,7 +598,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/cart'}
-                                                                    className={`link text-secondary duration-300 ${pathname === '/cart' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ₹{pathname === '/cart' ? 'active' : ''}`}
                                                                 >
                                                                     Shopping Cart
                                                                 </Link>
@@ -606,7 +606,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/login'}
-                                                                    className={`link text-secondary duration-300 ${pathname === '/login' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ₹{pathname === '/login' ? 'active' : ''}`}
                                                                 >
                                                                     Login/Register
                                                                 </Link>
@@ -614,7 +614,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/forgot-password'}
-                                                                    className={`link text-secondary duration-300 ${pathname === '/forgot-password' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ₹{pathname === '/forgot-password' ? 'active' : ''}`}
                                                                 >
                                                                     Forgot Password
                                                                 </Link>
@@ -622,7 +622,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/order-tracking'}
-                                                                    className={`link text-secondary duration-300 ${pathname === '/order-tracking' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ₹{pathname === '/order-tracking' ? 'active' : ''}`}
                                                                 >
                                                                     Order Tracking
                                                                 </Link>
@@ -630,7 +630,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/my-account'}
-                                                                    className={`link text-secondary duration-300 ${pathname === '/my-account' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ₹{pathname === '/my-account' ? 'active' : ''}`}
                                                                 >
                                                                     My Account
                                                                 </Link>
@@ -664,7 +664,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/product/default'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/product/default' ? 'active' : ''}`}
+                                                                    className={`text-secondary duration-300 ₹{pathname === '/product/default' ? 'active' : ''}`}
                                                                 >
                                                                     Products Defaults
                                                                 </Link>
@@ -672,7 +672,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/product/sale'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/product/sale' ? 'active' : ''}`}
+                                                                    className={`text-secondary duration-300 ₹{pathname === '/product/sale' ? 'active' : ''}`}
                                                                 >
                                                                     Products Sale
                                                                 </Link>
@@ -680,7 +680,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/product/countdown-timer'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/product/countdown-timer' ? 'active' : ''}`}
+                                                                    className={`text-secondary duration-300 ₹{pathname === '/product/countdown-timer' ? 'active' : ''}`}
                                                                 >
                                                                     Products Countdown Timer
                                                                 </Link>
@@ -688,7 +688,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/product/grouped'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/product/grouped' ? 'active' : ''}`}
+                                                                    className={`text-secondary duration-300 ₹{pathname === '/product/grouped' ? 'active' : ''}`}
                                                                 >
                                                                     Products Grouped
                                                                 </Link>
@@ -696,7 +696,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/product/bought-together'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/product/bought-together' ? 'active' : ''}`}
+                                                                    className={`text-secondary duration-300 ₹{pathname === '/product/bought-together' ? 'active' : ''}`}
                                                                 >
                                                                     Frequently Bought Together
                                                                 </Link>
@@ -704,7 +704,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/product/out-of-stock'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/product/out-of-stock' ? 'active' : ''}`}
+                                                                    className={`text-secondary duration-300 ₹{pathname === '/product/out-of-stock' ? 'active' : ''}`}
                                                                 >
                                                                     Products Out Of Stock
                                                                 </Link>
@@ -712,7 +712,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/product/variable'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/product/variable' ? 'active' : ''}`}
+                                                                    className={`text-secondary duration-300 ₹{pathname === '/product/variable' ? 'active' : ''}`}
                                                                 >
                                                                     Products Variable
                                                                 </Link>
@@ -725,7 +725,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/product/external'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/product/external' ? 'active' : ''}`}
+                                                                    className={`text-secondary duration-300 ₹{pathname === '/product/external' ? 'active' : ''}`}
                                                                 >
                                                                     Products External
                                                                 </Link>
@@ -733,7 +733,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/product/on-sale'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/product/on-sale' ? 'active' : ''}`}
+                                                                    className={`text-secondary duration-300 ₹{pathname === '/product/on-sale' ? 'active' : ''}`}
                                                                 >
                                                                     Products On Sale
                                                                 </Link>
@@ -741,7 +741,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/product/discount'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/product/discount' ? 'active' : ''}`}
+                                                                    className={`text-secondary duration-300 ₹{pathname === '/product/discount' ? 'active' : ''}`}
                                                                 >
                                                                     Products With Discount
                                                                 </Link>
@@ -749,7 +749,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/product/sidebar'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/product/sidebar' ? 'active' : ''}`}
+                                                                    className={`text-secondary duration-300 ₹{pathname === '/product/sidebar' ? 'active' : ''}`}
                                                                 >
                                                                     Products With Sidebar
                                                                 </Link>
@@ -757,7 +757,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/product/fixed-price'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/product/fixed-price' ? 'active' : ''}`}
+                                                                    className={`text-secondary duration-300 ₹{pathname === '/product/fixed-price' ? 'active' : ''}`}
                                                                 >
                                                                     Products Fixed Price
                                                                 </Link>
@@ -770,7 +770,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/product/thumbnail-left'}
-                                                                    className={`link text-secondary duration-300 cursor-pointer ${pathname === '/product/thumbnail-left' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer ₹{pathname === '/product/thumbnail-left' ? 'active' : ''}`}
                                                                 >
                                                                     Products Thumbnails Left
                                                                 </Link>
@@ -778,7 +778,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/product/thumbnail-bottom'}
-                                                                    className={`link text-secondary duration-300 cursor-pointer ${pathname === '/product/thumbnail-bottom' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer ₹{pathname === '/product/thumbnail-bottom' ? 'active' : ''}`}
                                                                 >
                                                                     Products Thumbnails Bottom
                                                                 </Link>
@@ -786,7 +786,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/product/one-scrolling'}
-                                                                    className={`link text-secondary duration-300 cursor-pointer ${pathname === '/product/one-scrolling' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer ₹{pathname === '/product/one-scrolling' ? 'active' : ''}`}
                                                                 >
                                                                     Products Grid 1 Scrolling
                                                                 </Link>
@@ -794,7 +794,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/product/two-scrolling'}
-                                                                    className={`link text-secondary duration-300 cursor-pointer ${pathname === '/product/two-scrolling' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer ₹{pathname === '/product/two-scrolling' ? 'active' : ''}`}
                                                                 >
                                                                     Products Grid 2 Scrolling
                                                                 </Link>
@@ -802,7 +802,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/product/combined-one'}
-                                                                    className={`link text-secondary duration-300 cursor-pointer ${pathname === '/product/combined-one' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer ₹{pathname === '/product/combined-one' ? 'active' : ''}`}
                                                                 >
                                                                     Products Combined 1
                                                                 </Link>
@@ -810,7 +810,7 @@ const MenuCosmeticThree = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/product/combined-two'}
-                                                                    className={`link text-secondary duration-300 cursor-pointer ${pathname === '/product/combined-two' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer ₹{pathname === '/product/combined-two' ? 'active' : ''}`}
                                                                 >
                                                                     Products Combined 2
                                                                 </Link>
@@ -837,27 +837,27 @@ const MenuCosmeticThree = () => {
                                     <div className="sub-menu py-3 px-5 -left-10 absolute bg-white rounded-b-xl">
                                         <ul className='w-full'>
                                             <li>
-                                                <Link href="/blog/default" className={`text-secondary duration-300 ${pathname === '/blog/default' ? 'active' : ''}`}>
+                                                <Link href="/blog/default" className={`text-secondary duration-300 ₹{pathname === '/blog/default' ? 'active' : ''}`}>
                                                     Blog Default
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="/blog/list" className={`text-secondary duration-300 ${pathname === '/blog/list' ? 'active' : ''}`}>
+                                                <Link href="/blog/list" className={`text-secondary duration-300 ₹{pathname === '/blog/list' ? 'active' : ''}`}>
                                                     Blog List
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="/blog/grid" className={`text-secondary duration-300 ${pathname === '/blog/grid' ? 'active' : ''}`}>
+                                                <Link href="/blog/grid" className={`text-secondary duration-300 ₹{pathname === '/blog/grid' ? 'active' : ''}`}>
                                                     Blog Grid
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="/blog/detail1" className={`text-secondary duration-300 ${pathname === '/blog/detail1' ? 'active' : ''}`}>
+                                                <Link href="/blog/detail1" className={`text-secondary duration-300 ₹{pathname === '/blog/detail1' ? 'active' : ''}`}>
                                                     Blog Detail 1
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="/blog/detail2" className={`text-secondary duration-300 ${pathname === '/blog/detail2' ? 'active' : ''}`}>
+                                                <Link href="/blog/detail2" className={`text-secondary duration-300 ₹{pathname === '/blog/detail2' ? 'active' : ''}`}>
                                                     Blog Detail 2
                                                 </Link>
                                             </li>
@@ -871,37 +871,37 @@ const MenuCosmeticThree = () => {
                                     <div className="sub-menu py-3 px-5 -left-10 absolute bg-white rounded-b-xl">
                                         <ul className='w-full'>
                                             <li>
-                                                <Link href="/pages/about" className={`text-secondary duration-300 ${pathname === '/pages/about' ? 'active' : ''}`}>
+                                                <Link href="/pages/about" className={`text-secondary duration-300 ₹{pathname === '/pages/about' ? 'active' : ''}`}>
                                                     About Us
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="/pages/contact" className={`text-secondary duration-300 ${pathname === '/pages/contact' ? 'active' : ''}`}>
+                                                <Link href="/pages/contact" className={`text-secondary duration-300 ₹{pathname === '/pages/contact' ? 'active' : ''}`}>
                                                     Contact Us
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="/pages/store-list" className={`text-secondary duration-300 ${pathname === '/pages/store-list' ? 'active' : ''}`}>
+                                                <Link href="/pages/store-list" className={`text-secondary duration-300 ₹{pathname === '/pages/store-list' ? 'active' : ''}`}>
                                                     Store List
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="/pages/page-not-found" className={`text-secondary duration-300 ${pathname === '/pages/page-not-found' ? 'active' : ''}`}>
+                                                <Link href="/pages/page-not-found" className={`text-secondary duration-300 ₹{pathname === '/pages/page-not-found' ? 'active' : ''}`}>
                                                     404
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="/pages/faqs" className={`text-secondary duration-300 ${pathname === '/pages/faqs' ? 'active' : ''}`}>
+                                                <Link href="/pages/faqs" className={`text-secondary duration-300 ₹{pathname === '/pages/faqs' ? 'active' : ''}`}>
                                                     FAQs
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="/pages/coming-soon" className={`text-secondary duration-300 ${pathname === '/pages/coming-soon' ? 'active' : ''}`}>
+                                                <Link href="/pages/coming-soon" className={`text-secondary duration-300 ₹{pathname === '/pages/coming-soon' ? 'active' : ''}`}>
                                                     Coming Soon
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="/pages/customer-feedbacks" className={`text-secondary duration-300 ${pathname === '/pages/customer-feedbacks' ? 'active' : ''}`}>
+                                                <Link href="/pages/customer-feedbacks" className={`text-secondary duration-300 ₹{pathname === '/pages/customer-feedbacks' ? 'active' : ''}`}>
                                                     Customer Feedbacks
                                                 </Link>
                                             </li>
@@ -920,7 +920,7 @@ const MenuCosmeticThree = () => {
                                     <Icon.User size={24} color='black' onClick={handleLoginPopup} />
                                     <div
                                         className={`login-popup absolute top-[74px] w-[320px] p-7 rounded-xl bg-white box-shadow-sm 
-                                            ${openLoginPopup ? 'open' : ''}`}
+                                            ₹{openLoginPopup ? 'open' : ''}`}
                                     >
                                         <Link href={'/login'} className="button-main w-full text-center">Login</Link>
                                         <div className="text-secondary text-center mt-3 pb-4">Don’t have an account?
@@ -944,7 +944,7 @@ const MenuCosmeticThree = () => {
                 </div>
             </div>
 
-            <div id="menu-mobile" className={`${openMenuMobile ? 'open' : ''}`}>
+            <div id="menu-mobile" className={`₹{openMenuMobile ? 'open' : ''}`}>
                 <div className="menu-container bg-white h-full">
                     <div className="container h-full">
                         <div className="menu-main h-full overflow-hidden">
@@ -964,7 +964,7 @@ const MenuCosmeticThree = () => {
                             <div className="list-nav mt-6">
                                 <ul>
                                     <li
-                                        className={`${openSubNavMobile === 1 ? 'open' : ''}`}
+                                        className={`₹{openSubNavMobile === 1 ? 'open' : ''}`}
                                         onClick={() => handleOpenSubNavMobile(1)}
                                     >
                                         <a href={'#!'} className={`text-xl font-semibold flex items-center justify-between`}>Demo
@@ -983,119 +983,119 @@ const MenuCosmeticThree = () => {
                                             <div className="list-nav-item w-full grid grid-cols-2 pt-2 pb-6">
                                                 <ul>
                                                     <li>
-                                                        <Link href="/" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/' ? 'active' : ''}`}>
+                                                        <Link href="/" className={`nav-item-mobile text-secondary duration-300 ₹{pathname === '/' ? 'active' : ''}`}>
                                                             Home Fashion 1
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/fashion2" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/fashion2' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/fashion2" className={`nav-item-mobile text-secondary duration-300 ₹{pathname === '/homepages/fashion2' ? 'active' : ''}`}>
                                                             Home Fashion 2
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/fashion3" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/fashion3' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/fashion3" className={`nav-item-mobile text-secondary duration-300 ₹{pathname === '/homepages/fashion3' ? 'active' : ''}`}>
                                                             Home Fashion 3
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/fashion4" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/fashion4' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/fashion4" className={`nav-item-mobile text-secondary duration-300 ₹{pathname === '/homepages/fashion4' ? 'active' : ''}`}>
                                                             Home Fashion 4
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/fashion5" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/fashion5' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/fashion5" className={`nav-item-mobile text-secondary duration-300 ₹{pathname === '/homepages/fashion5' ? 'active' : ''}`}>
                                                             Home Fashion 5
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/fashion6" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/fashion6' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/fashion6" className={`nav-item-mobile text-secondary duration-300 ₹{pathname === '/homepages/fashion6' ? 'active' : ''}`}>
                                                             Home Fashion 6
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/fashion7" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/fashion7' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/fashion7" className={`nav-item-mobile text-secondary duration-300 ₹{pathname === '/homepages/fashion7' ? 'active' : ''}`}>
                                                             Home Fashion 7
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/fashion8" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/fashion8' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/fashion8" className={`nav-item-mobile text-secondary duration-300 ₹{pathname === '/homepages/fashion8' ? 'active' : ''}`}>
                                                             Home Fashion 8
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/fashion9" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/fashion9' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/fashion9" className={`nav-item-mobile text-secondary duration-300 ₹{pathname === '/homepages/fashion9' ? 'active' : ''}`}>
                                                             Home Fashion 9
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/fashion10" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/fashion10' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/fashion10" className={`nav-item-mobile text-secondary duration-300 ₹{pathname === '/homepages/fashion10' ? 'active' : ''}`}>
                                                             Home Fashion 10
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/fashion11" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/fashion11' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/fashion11" className={`nav-item-mobile text-secondary duration-300 ₹{pathname === '/homepages/fashion11' ? 'active' : ''}`}>
                                                             Home Fashion 11
                                                         </Link>
                                                     </li>
                                                 </ul>
                                                 <ul>
                                                     <li>
-                                                        <Link href="/homepages/underwear" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/underwear' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/underwear" className={`nav-item-mobile text-secondary duration-300 ₹{pathname === '/homepages/underwear' ? 'active' : ''}`}>
                                                             Home Underwear
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/cosmetic1" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/cosmetic1' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/cosmetic1" className={`nav-item-mobile text-secondary duration-300 ₹{pathname === '/homepages/cosmetic1' ? 'active' : ''}`}>
                                                             Home Cosmetic 1
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/cosmetic2" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/cosmetic2' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/cosmetic2" className={`nav-item-mobile text-secondary duration-300 ₹{pathname === '/homepages/cosmetic2' ? 'active' : ''}`}>
                                                             Home Cosmetic 2
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/cosmetic3" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/cosmetic3' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/cosmetic3" className={`nav-item-mobile text-secondary duration-300 ₹{pathname === '/homepages/cosmetic3' ? 'active' : ''}`}>
                                                             Home Cosmetic 3
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/pet" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/pet' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/pet" className={`nav-item-mobile text-secondary duration-300 ₹{pathname === '/homepages/pet' ? 'active' : ''}`}>
                                                             Home Pet Store
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/jewelry" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/jewelry' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/jewelry" className={`nav-item-mobile text-secondary duration-300 ₹{pathname === '/homepages/jewelry' ? 'active' : ''}`}>
                                                             Home Jewelry
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/furniture" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/furniture' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/furniture" className={`nav-item-mobile text-secondary duration-300 ₹{pathname === '/homepages/furniture' ? 'active' : ''}`}>
                                                             Home Furniture
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/watch" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/watch' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/watch" className={`nav-item-mobile text-secondary duration-300 ₹{pathname === '/homepages/watch' ? 'active' : ''}`}>
                                                             Home Watch
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/toys" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/toys' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/toys" className={`nav-item-mobile text-secondary duration-300 ₹{pathname === '/homepages/toys' ? 'active' : ''}`}>
                                                             Home Toys Kid
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/yoga" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/yoga' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/yoga" className={`nav-item-mobile text-secondary duration-300 ₹{pathname === '/homepages/yoga' ? 'active' : ''}`}>
                                                             Home Yoga
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/organic" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/organic' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/organic" className={`nav-item-mobile text-secondary duration-300 ₹{pathname === '/homepages/organic' ? 'active' : ''}`}>
                                                             Home Organic
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/marketplace" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/marketplace' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/marketplace" className={`nav-item-mobile text-secondary duration-300 ₹{pathname === '/homepages/marketplace' ? 'active' : ''}`}>
                                                             Home Marketplace
                                                         </Link>
                                                     </li>
@@ -1104,7 +1104,7 @@ const MenuCosmeticThree = () => {
                                         </div>
                                     </li>
                                     <li
-                                        className={`${openSubNavMobile === 2 ? 'open' : ''}`}
+                                        className={`₹{openSubNavMobile === 2 ? 'open' : ''}`}
                                         onClick={() => handleOpenSubNavMobile(2)}
                                     >
                                         <a href={'#!'} className='text-xl font-semibold flex items-center justify-between mt-5'>Features
@@ -1306,10 +1306,10 @@ const MenuCosmeticThree = () => {
                                                 <div className="banner-ads-block grid sm:grid-cols-2 items-center gap-6 pt-6">
                                                     <div className="banner-ads-item bg-linear rounded-2xl relative overflow-hidden" onClick={() => handleCategoryClick('cosmetic')}>
                                                         <div className="text-content py-14 pl-8 relative z-[1]">
-                                                            <div className="text-button-uppercase text-white bg-red px-2 py-0.5 inline-block rounded-sm">Save $10</div>
+                                                            <div className="text-button-uppercase text-white bg-red px-2 py-0.5 inline-block rounded-sm">Save ₹10</div>
                                                             <div className="heading6 mt-2">20% off <br />Cosmetic</div>
                                                             <div className="body1 mt-3 text-secondary">
-                                                                Starting at <span className='text-red'>$59.99</span>
+                                                                Starting at <span className='text-red'>₹59.99</span>
                                                             </div>
                                                             <div className="button-main mt-5">Shop Now</div>
                                                         </div>
@@ -1326,7 +1326,7 @@ const MenuCosmeticThree = () => {
                                         </div>
                                     </li>
                                     <li
-                                        className={`${openSubNavMobile === 3 ? 'open' : ''}`}
+                                        className={`₹{openSubNavMobile === 3 ? 'open' : ''}`}
                                         onClick={() => handleOpenSubNavMobile(3)}
                                     >
                                         <a href={'#!'} className='text-xl font-semibold flex items-center justify-between mt-5'>Shop
@@ -1351,7 +1351,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/breadcrumb-img'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb-img' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300 ₹{pathname === '/shop/breadcrumb-img' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Breadcrumb IMG
                                                                     </Link>
@@ -1359,7 +1359,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/breadcrumb1'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb1' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300 ₹{pathname === '/shop/breadcrumb1' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Breadcrumb 1
                                                                     </Link>
@@ -1367,7 +1367,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/breadcrumb2'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb2' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300 ₹{pathname === '/shop/breadcrumb2' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Breadcrumb 2
                                                                     </Link>
@@ -1375,7 +1375,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/collection'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/shop/collection' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300 ₹{pathname === '/shop/collection' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Collection
                                                                     </Link>
@@ -1388,7 +1388,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/filter-canvas'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/shop/filter-canvas' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300 ₹{pathname === '/shop/filter-canvas' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Filter Canvas
                                                                     </Link>
@@ -1396,7 +1396,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/filter-options'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/shop/filter-options' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300 ₹{pathname === '/shop/filter-options' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Filter Options
                                                                     </Link>
@@ -1404,7 +1404,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/filter-dropdown'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/shop/filter-dropdown' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300 ₹{pathname === '/shop/filter-dropdown' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Filter Dropdown
                                                                     </Link>
@@ -1412,7 +1412,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/sidebar-list'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/shop/sidebar-list' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300 ₹{pathname === '/shop/sidebar-list' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Sidebar List
                                                                     </Link>
@@ -1425,7 +1425,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/default'}
-                                                                        className={`link text-secondary duration-300 cursor-pointer ${pathname === '/shop/default' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 cursor-pointer ₹{pathname === '/shop/default' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Default
                                                                     </Link>
@@ -1433,7 +1433,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/default-grid'}
-                                                                        className={`link text-secondary duration-300 cursor-pointer ${pathname === '/shop/default-grid' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 cursor-pointer ₹{pathname === '/shop/default-grid' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Default Grid
                                                                     </Link>
@@ -1441,7 +1441,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/default-list'}
-                                                                        className={`link text-secondary duration-300 cursor-pointer ${pathname === '/shop/default-list' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 cursor-pointer ₹{pathname === '/shop/default-list' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Default List
                                                                     </Link>
@@ -1449,7 +1449,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/fullwidth'}
-                                                                        className={`link text-secondary duration-300 cursor-pointer ${pathname === '/shop/fullwidth' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 cursor-pointer ₹{pathname === '/shop/fullwidth' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Full Width
                                                                     </Link>
@@ -1457,7 +1457,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/square'}
-                                                                        className={`link text-secondary duration-300 ${pathname === '/shop/square' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ₹{pathname === '/shop/square' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Square
                                                                     </Link>
@@ -1470,7 +1470,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/wishlist'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/wishlist' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300 ₹{pathname === '/wishlist' ? 'active' : ''}`}
                                                                     >
                                                                         Wish List
                                                                     </Link>
@@ -1478,7 +1478,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/search-result'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/search-result' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300 ₹{pathname === '/search-result' ? 'active' : ''}`}
                                                                     >
                                                                         Search Result
                                                                     </Link>
@@ -1486,7 +1486,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/cart'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/cart' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300 ₹{pathname === '/cart' ? 'active' : ''}`}
                                                                     >
                                                                         Shopping Cart
                                                                     </Link>
@@ -1494,7 +1494,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/login'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/login' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300 ₹{pathname === '/login' ? 'active' : ''}`}
                                                                     >
                                                                         Login/Register
                                                                     </Link>
@@ -1502,7 +1502,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/forgot-password'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/forgot-password' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300 ₹{pathname === '/forgot-password' ? 'active' : ''}`}
                                                                     >
                                                                         Forgot Password
                                                                     </Link>
@@ -1510,7 +1510,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/order-tracking'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/order-tracking' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300 ₹{pathname === '/order-tracking' ? 'active' : ''}`}
                                                                     >
                                                                         Order Tracking
                                                                     </Link>
@@ -1518,7 +1518,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/my-account'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/my-account' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300 ₹{pathname === '/my-account' ? 'active' : ''}`}
                                                                     >
                                                                         My Account
                                                                     </Link>
@@ -1539,7 +1539,7 @@ const MenuCosmeticThree = () => {
                                         </div>
                                     </li>
                                     <li
-                                        className={`${openSubNavMobile === 4 ? 'open' : ''}`}
+                                        className={`₹{openSubNavMobile === 4 ? 'open' : ''}`}
                                         onClick={() => handleOpenSubNavMobile(4)}
                                     >
                                         <a href={'#!'} className='text-xl font-semibold flex items-center justify-between mt-5'>Product
@@ -1564,7 +1564,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/default'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/default' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300 ₹{pathname === '/product/default' ? 'active' : ''}`}
                                                                     >
                                                                         Products Defaults
                                                                     </Link>
@@ -1572,7 +1572,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/sale'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/sale' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300 ₹{pathname === '/product/sale' ? 'active' : ''}`}
                                                                     >
                                                                         Products Sale
                                                                     </Link>
@@ -1580,7 +1580,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/countdown-timer'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/countdown-timer' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300 ₹{pathname === '/product/countdown-timer' ? 'active' : ''}`}
                                                                     >
                                                                         Products Countdown Timer
                                                                     </Link>
@@ -1588,7 +1588,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/grouped'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/grouped' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300 ₹{pathname === '/product/grouped' ? 'active' : ''}`}
                                                                     >
                                                                         Products Grouped
                                                                     </Link>
@@ -1596,7 +1596,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/bought-together'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/bought-together' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300 ₹{pathname === '/product/bought-together' ? 'active' : ''}`}
                                                                     >
                                                                         Frequently Bought Together
                                                                     </Link>
@@ -1604,7 +1604,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/out-of-stock'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/out-of-stock' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300 ₹{pathname === '/product/out-of-stock' ? 'active' : ''}`}
                                                                     >
                                                                         Products Out Of Stock
                                                                     </Link>
@@ -1612,7 +1612,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/variable'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/variable' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300 ₹{pathname === '/product/variable' ? 'active' : ''}`}
                                                                     >
                                                                         Products Variable
                                                                     </Link>
@@ -1625,7 +1625,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/external'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/external' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300 ₹{pathname === '/product/external' ? 'active' : ''}`}
                                                                     >
                                                                         Products External
                                                                     </Link>
@@ -1633,7 +1633,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/on-sale'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/on-sale' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300 ₹{pathname === '/product/on-sale' ? 'active' : ''}`}
                                                                     >
                                                                         Products On Sale
                                                                     </Link>
@@ -1641,7 +1641,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/discount'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/discount' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300 ₹{pathname === '/product/discount' ? 'active' : ''}`}
                                                                     >
                                                                         Products With Discount
                                                                     </Link>
@@ -1649,7 +1649,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/sidebar'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/sidebar' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300 ₹{pathname === '/product/sidebar' ? 'active' : ''}`}
                                                                     >
                                                                         Products With Sidebar
                                                                     </Link>
@@ -1657,7 +1657,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/fixed-price'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/fixed-price' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300 ₹{pathname === '/product/fixed-price' ? 'active' : ''}`}
                                                                     >
                                                                         Products Fixed Price
                                                                     </Link>
@@ -1670,7 +1670,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/thumbnail-left'}
-                                                                        className={`link text-secondary duration-300 ${pathname === '/product/thumbnail-left' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ₹{pathname === '/product/thumbnail-left' ? 'active' : ''}`}
                                                                     >
                                                                         Products Thumbnails Left
                                                                     </Link>
@@ -1678,7 +1678,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/thumbnail-bottom'}
-                                                                        className={`link text-secondary duration-300 ${pathname === '/product/thumbnail-bottom' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ₹{pathname === '/product/thumbnail-bottom' ? 'active' : ''}`}
                                                                     >
                                                                         Products Thumbnails Bottom
                                                                     </Link>
@@ -1686,7 +1686,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/one-scrolling'}
-                                                                        className={`link text-secondary duration-300 ${pathname === '/product/one-scrolling' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ₹{pathname === '/product/one-scrolling' ? 'active' : ''}`}
                                                                     >
                                                                         Products Grid 1 Scrolling
                                                                     </Link>
@@ -1694,7 +1694,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/two-scrolling'}
-                                                                        className={`link text-secondary duration-300 ${pathname === '/product/two-scrolling' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ₹{pathname === '/product/two-scrolling' ? 'active' : ''}`}
                                                                     >
                                                                         Products Grid 2 Scrolling
                                                                     </Link>
@@ -1702,7 +1702,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/combined-one'}
-                                                                        className={`link text-secondary duration-300 ${pathname === '/product/combined-one' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ₹{pathname === '/product/combined-one' ? 'active' : ''}`}
                                                                     >
                                                                         Products Combined 1
                                                                     </Link>
@@ -1710,7 +1710,7 @@ const MenuCosmeticThree = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/combined-two'}
-                                                                        className={`link text-secondary duration-300 ${pathname === '/product/combined-two' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ₹{pathname === '/product/combined-two' ? 'active' : ''}`}
                                                                     >
                                                                         Products Combined 2
                                                                     </Link>
@@ -1731,7 +1731,7 @@ const MenuCosmeticThree = () => {
                                         </div>
                                     </li>
                                     <li
-                                        className={`${openSubNavMobile === 5 ? 'open' : ''}`}
+                                        className={`₹{openSubNavMobile === 5 ? 'open' : ''}`}
                                         onClick={() => handleOpenSubNavMobile(5)}
                                     >
                                         <a href={'#!'} className='text-xl font-semibold flex items-center justify-between mt-5'>Blog
@@ -1750,27 +1750,27 @@ const MenuCosmeticThree = () => {
                                             <div className="list-nav-item w-full pt-2 pb-6">
                                                 <ul className='w-full'>
                                                     <li>
-                                                        <Link href="/blog/default" className={`text-secondary duration-300 ${pathname === '/blog/default' ? 'active' : ''}`}>
+                                                        <Link href="/blog/default" className={`text-secondary duration-300 ₹{pathname === '/blog/default' ? 'active' : ''}`}>
                                                             Blog Default
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/blog/list" className={`text-secondary duration-300 ${pathname === '/blog/list' ? 'active' : ''}`}>
+                                                        <Link href="/blog/list" className={`text-secondary duration-300 ₹{pathname === '/blog/list' ? 'active' : ''}`}>
                                                             Blog List
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/blog/grid" className={`text-secondary duration-300 ${pathname === '/blog/grid' ? 'active' : ''}`}>
+                                                        <Link href="/blog/grid" className={`text-secondary duration-300 ₹{pathname === '/blog/grid' ? 'active' : ''}`}>
                                                             Blog Grid
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/blog/detail1" className={`text-secondary duration-300 ${pathname === '/blog/detail1' ? 'active' : ''}`}>
+                                                        <Link href="/blog/detail1" className={`text-secondary duration-300 ₹{pathname === '/blog/detail1' ? 'active' : ''}`}>
                                                             Blog Detail 1
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/blog/detail2" className={`text-secondary duration-300 ${pathname === '/blog/detail2' ? 'active' : ''}`}>
+                                                        <Link href="/blog/detail2" className={`text-secondary duration-300 ₹{pathname === '/blog/detail2' ? 'active' : ''}`}>
                                                             Blog Detail 2
                                                         </Link>
                                                     </li>
@@ -1779,7 +1779,7 @@ const MenuCosmeticThree = () => {
                                         </div>
                                     </li>
                                     <li
-                                        className={`${openSubNavMobile === 6 ? 'open' : ''}`}
+                                        className={`₹{openSubNavMobile === 6 ? 'open' : ''}`}
                                         onClick={() => handleOpenSubNavMobile(6)}
                                     >
                                         <a href={'#!'} className='text-xl font-semibold flex items-center justify-between mt-5'>Pages
@@ -1798,37 +1798,37 @@ const MenuCosmeticThree = () => {
                                             <div className="list-nav-item w-full pt-2 pb-6">
                                                 <ul className='w-full'>
                                                     <li>
-                                                        <Link href="/pages/about" className={`text-secondary duration-300 ${pathname === '/pages/about' ? 'active' : ''}`}>
+                                                        <Link href="/pages/about" className={`text-secondary duration-300 ₹{pathname === '/pages/about' ? 'active' : ''}`}>
                                                             About Us
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/pages/contact" className={`text-secondary duration-300 ${pathname === '/pages/contact' ? 'active' : ''}`}>
+                                                        <Link href="/pages/contact" className={`text-secondary duration-300 ₹{pathname === '/pages/contact' ? 'active' : ''}`}>
                                                             Contact Us
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/pages/store-list" className={`text-secondary duration-300 ${pathname === '/pages/store-list' ? 'active' : ''}`}>
+                                                        <Link href="/pages/store-list" className={`text-secondary duration-300 ₹{pathname === '/pages/store-list' ? 'active' : ''}`}>
                                                             Store List
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/pages/page-not-found" className={`text-secondary duration-300 ${pathname === '/pages/page-not-found' ? 'active' : ''}`}>
+                                                        <Link href="/pages/page-not-found" className={`text-secondary duration-300 ₹{pathname === '/pages/page-not-found' ? 'active' : ''}`}>
                                                             404
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/pages/faqs" className={`text-secondary duration-300 ${pathname === '/pages/faqs' ? 'active' : ''}`}>
+                                                        <Link href="/pages/faqs" className={`text-secondary duration-300 ₹{pathname === '/pages/faqs' ? 'active' : ''}`}>
                                                             FAQs
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/pages/coming-soon" className={`text-secondary duration-300 ${pathname === '/pages/coming-soon' ? 'active' : ''}`}>
+                                                        <Link href="/pages/coming-soon" className={`text-secondary duration-300 ₹{pathname === '/pages/coming-soon' ? 'active' : ''}`}>
                                                             Coming Soon
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/pages/customer-feedbacks" className={`text-secondary duration-300 ${pathname === '/pages/customer-feedbacks' ? 'active' : ''}`}>
+                                                        <Link href="/pages/customer-feedbacks" className={`text-secondary duration-300 ₹{pathname === '/pages/customer-feedbacks' ? 'active' : ''}`}>
                                                             Customer Feedbacks
                                                         </Link>
                                                     </li>

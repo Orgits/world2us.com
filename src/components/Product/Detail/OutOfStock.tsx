@@ -164,7 +164,7 @@ const OutOfStock: React.FC<Props> = ({ data, productId }) => {
                                 {productMain.images.map((item, index) => (
                                     <SwiperSlide
                                         key={index}
-                                    // className={`${activeImage === item ? 'swiper-slide-thumb-active' : ''}`}
+                                    // className={`₹{activeImage === item ? 'swiper-slide-thumb-active' : ''}`}
                                     >
                                         <Image
                                             src={item}
@@ -176,7 +176,7 @@ const OutOfStock: React.FC<Props> = ({ data, productId }) => {
                                     </SwiperSlide>
                                 ))}
                             </Swiper>
-                            <div className={`popup-img ${openPopupImg ? 'open' : ''}`}>
+                            <div className={`popup-img ₹{openPopupImg ? 'open' : ''}`}>
                                 <span
                                     className="close-popup-btn absolute top-4 right-4 z-[2] cursor-pointer"
                                     onClick={() => {
@@ -225,7 +225,7 @@ const OutOfStock: React.FC<Props> = ({ data, productId }) => {
                                     <div className="heading4 mt-1">{productMain.name}</div>
                                 </div>
                                 <div
-                                    className={`add-wishlist-btn w-12 h-12 flex items-center justify-center border border-line cursor-pointer rounded-xl duration-300 hover:bg-black hover:text-white ${wishlistState.wishlistArray.some(item => item.id === productMain.id) ? 'active' : ''}`}
+                                    className={`add-wishlist-btn w-12 h-12 flex items-center justify-center border border-line cursor-pointer rounded-xl duration-300 hover:bg-black hover:text-white ₹{wishlistState.wishlistArray.some(item => item.id === productMain.id) ? 'active' : ''}`}
                                     onClick={handleAddToWishlist}
                                 >
                                     {wishlistState.wishlistArray.some(item => item.id === productMain.id) ? (
@@ -244,9 +244,9 @@ const OutOfStock: React.FC<Props> = ({ data, productId }) => {
                                 <span className='caption1 text-secondary'>(1.234 reviews)</span>
                             </div>
                             <div className="flex items-center gap-3 flex-wrap mt-5 pb-6 border-b border-line">
-                                <div className="product-price heading5">${productMain.price}.00</div>
+                                <div className="product-price heading5">₹{productMain.price}.00</div>
                                 <div className='w-px h-4 bg-line'></div>
-                                <div className="product-origin-price font-normal text-secondary2"><del>${productMain.originPrice}.00</del></div>
+                                <div className="product-origin-price font-normal text-secondary2"><del>₹{productMain.originPrice}.00</del></div>
                                 {productMain.originPrice && (
                                     <div className="product-sale caption2 font-semibold bg-green px-3 py-0.5 inline-block rounded-full">
                                         -{percentSale}%
@@ -291,7 +291,7 @@ const OutOfStock: React.FC<Props> = ({ data, productId }) => {
                                     <div className="list-size flex items-center gap-2 flex-wrap mt-3">
                                         {productMain.sizes.map((item, index) => (
                                             <div
-                                                className={`size-item ${item === 'freesize' ? 'px-3 py-2' : 'w-12 h-12'} relative flex items-center justify-center text-button rounded-full bg-surface text-secondary2`}
+                                                className={`size-item ₹{item === 'freesize' ? 'px-3 py-2' : 'w-12 h-12'} relative flex items-center justify-center text-button rounded-full bg-surface text-secondary2`}
                                                 key={index}
                                             >
                                                 {item}
@@ -429,7 +429,7 @@ const OutOfStock: React.FC<Props> = ({ data, productId }) => {
                                     <div className="icon-delivery-truck text-4xl"></div>
                                     <div>
                                         <div className="text-title">Free shipping</div>
-                                        <div className="caption1 text-secondary mt-1">Free shipping on orders over $75.</div>
+                                        <div className="caption1 text-secondary mt-1">Free shipping on orders over ₹75.</div>
                                     </div>
                                 </div>
                                 <div className="item flex items-center gap-3 mt-4">
@@ -455,19 +455,19 @@ const OutOfStock: React.FC<Props> = ({ data, productId }) => {
                         <div className="flex items-center justify-center w-full">
                             <div className="menu-tab flex items-center md:gap-[60px] gap-8">
                                 <div
-                                    className={`tab-item heading5 has-line-before text-secondary2 hover:text-black duration-300 ${activeTab === 'description' ? 'active' : ''}`}
+                                    className={`tab-item heading5 has-line-before text-secondary2 hover:text-black duration-300 ₹{activeTab === 'description' ? 'active' : ''}`}
                                     onClick={() => handleActiveTab('description')}
                                 >
                                     Description
                                 </div>
                                 <div
-                                    className={`tab-item heading5 has-line-before text-secondary2 hover:text-black duration-300 ${activeTab === 'specifications' ? 'active' : ''}`}
+                                    className={`tab-item heading5 has-line-before text-secondary2 hover:text-black duration-300 ₹{activeTab === 'specifications' ? 'active' : ''}`}
                                     onClick={() => handleActiveTab('specifications')}
                                 >
                                     Specifications
                                 </div>
                                 <div
-                                    className={`tab-item heading5 has-line-before text-secondary2 hover:text-black duration-300 ${activeTab === 'review' ? 'active' : ''}`}
+                                    className={`tab-item heading5 has-line-before text-secondary2 hover:text-black duration-300 ₹{activeTab === 'review' ? 'active' : ''}`}
                                     onClick={() => handleActiveTab('review')}
                                 >
                                     Review
@@ -475,7 +475,7 @@ const OutOfStock: React.FC<Props> = ({ data, productId }) => {
                             </div>
                         </div>
                         <div className="desc-block mt-8">
-                            <div className={`desc-item description ${activeTab === 'description' ? 'open' : ''}`}>
+                            <div className={`desc-item description ₹{activeTab === 'description' ? 'open' : ''}`}>
                                 <div className='grid md:grid-cols-2 gap-8 gap-y-5'>
                                     <div className="left">
                                         <div className="heading6">Description</div>
@@ -530,7 +530,7 @@ const OutOfStock: React.FC<Props> = ({ data, productId }) => {
                                     </div>
                                 </div>
                             </div>
-                            <div className={`desc-item specifications flex items-center justify-center ${activeTab === 'specifications' ? 'open' : ''}`}>
+                            <div className={`desc-item specifications flex items-center justify-center ₹{activeTab === 'specifications' ? 'open' : ''}`}>
                                 <div className='lg:w-1/2 sm:w-3/4 w-full'>
                                     <div className="item bg-surface flex items-center gap-8 py-3 px-10">
                                         <div className="text-title sm:w-1/4 w-1/3">Rating</div>
@@ -600,7 +600,7 @@ const OutOfStock: React.FC<Props> = ({ data, productId }) => {
                                     </div>
                                 </div>
                             </div>
-                            <div className={`desc-item review-block ${activeTab === 'review' ? 'open' : ''}`}>
+                            <div className={`desc-item review-block ₹{activeTab === 'review' ? 'open' : ''}`}>
                                 <div className="top-overview flex max-sm:flex-col items-center justify-between gap-12 gap-y-4">
                                     <div className="left flex max-sm:flex-col gap-y-4 items-center justify-between lg:w-1/2 sm:w-2/3 w-full sm:pr-5">
                                         <div className='rating black-start flex flex-col items-center'>

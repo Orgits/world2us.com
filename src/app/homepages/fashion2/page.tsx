@@ -16,7 +16,7 @@ import ModalNewsletter from '@/components/Modal/ModalNewsletter'
 export default function HomeTwo() {
     return (
         <>
-            <TopNavOne props="style-two bg-purple" slogan='Limited Offer: Free shipping on orders over $50' />
+            <TopNavOne props="style-two bg-purple" slogan='Limited Offer: Free shipping on orders over ₹50' />
             <div id="header" className='relative w-full'>
                 <MenuTwo />
                 <SliderTwo />
