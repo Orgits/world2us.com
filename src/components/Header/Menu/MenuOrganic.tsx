@@ -1016,7 +1016,7 @@ const MenuOrganic = () => {
                             </div>
                             <div className="right flex items-center gap-1">
                                 <div className="caption1">Hotline:</div>
-                                <div className="text-button-uppercase">+01 1234 8888</div>
+                                <div className="text-button-uppercase">+91 63634 06885</div>
                             </div>
                         </div>
                     </div>
