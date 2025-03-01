@@ -9,7 +9,7 @@ import ModalCompare from "../components/Modal/ModalCompare";
 import CountdownProvider from "./CountdownProvider/CountdownProvider"; // Fixes countdownTime SSR issue
 
 export const metadata: Metadata = {
-  title: "Anvogue",
+  title: "World2us",
   description: "Multipurpose eCommerce Template",
 };
 
