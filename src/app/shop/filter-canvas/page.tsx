@@ -19,7 +19,12 @@ export default function FilterCanvas() {
             <div id="header" className='relative w-full'>
                 <MenuOne props="bg-transparent" />
             </div>
-            <ShopFilterCanvas data={productData} productPerPage={12} dataType={type} />
+            <ShopFilterCanvas
+    data={productData}
+    productPerPage={12}
+    dataType={type}
+    productStyle=""  // <-- Add a default empty string or a valid value
+/>
             <Footer />
         </>
     )
